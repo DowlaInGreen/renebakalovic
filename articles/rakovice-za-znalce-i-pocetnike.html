@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakovice za znalce i početnike — Rene Bakalović</title>
+  <meta name="description" content="Žive rakovice s trešnjevačke tržnice i temeljac koji je temelj svake dobre kuhinje.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../RBlogo.png">
+  <style>
+    :root {
+      --red: #E6392F;
+      --charcoal: #1A1A1A;
+      --off-white: #F5F0E8;
+      --mid-grey: #2C2C2C;
+      --text-muted: #888;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; overflow-x: hidden; }
+    body { background: var(--charcoal); color: var(--off-white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav.topnav { background: var(--charcoal); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; width: 100%; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-rb { height: 36px; width: 36px; object-fit: contain; display: block; }
+    .logo-full { height: 28px; object-fit: contain; display: block; }
+    .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; }
+    .nav-links a:hover, .nav-links a.active { color: var(--off-white); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 8px 14px; }
+
+    /* ARTICLE */
+    .article-wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 40px;
+    }
+    .back-link:hover { color: var(--off-white); }
+    .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .article-category {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      color: var(--red);
+      margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .article-category::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background: var(--red);
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(32px, 7vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--off-white);
+      margin-bottom: 28px;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .article-author {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--off-white);
+    }
+    .article-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .meta-divider {
+      width: 3px;
+      height: 3px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    .article-hero {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 48px;
+      border-bottom: 3px solid var(--red);
+    }
+
+    .article-body {
+      font-size: 17px;
+      line-height: 1.85;
+      color: rgba(245, 240, 232, 0.88);
+    }
+    .article-body p {
+      margin-bottom: 28px;
+    }
+    .article-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FOOTER */
+    footer { background: #111; border-top: 1px solid var(--border); padding: 40px 16px 80px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-logo { height: 48px; object-fit: contain; display: block; margin-bottom: 12px; }
+    .footer-brand p { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 32px; }
+    .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; }
+    .footer-col h4 { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
+    .footer-col ul li a:hover { color: var(--off-white); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom p { font-size: 11px; color: var(--text-muted); }
+
+    /* MOBILE NAV */
+    .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #111; border-top: 1px solid var(--border); z-index: 200; }
+    .mobile-nav-inner { display: flex; justify-content: space-around; align-items: center; height: 58px; }
+    .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; flex: 1; justify-content: center; padding: 6px 0; }
+    .mobile-nav-item svg { width: 20px; height: 20px; stroke: var(--text-muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .mobile-nav-item span { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+    .mobile-nav-item img { width: 26px; height: 26px; object-fit: contain; }
+
+    @media (max-width: 768px) {
+      .mobile-nav { display: block; }
+      .nav-links { display: none; }
+      .logo-full { display: none; }
+      body { padding-bottom: 58px; }
+      .footer-cols { grid-template-columns: repeat(2, 1fr); }
+      .article-wrap { padding: 32px 20px 60px; }
+      .article-body { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">
+      <img src="../RBlogo.png" alt="RB" class="logo-rb">
+      <img src="../logo-full.png" alt="Rene Bakalović — Food. Drink. City." class="logo-full">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Feed</a></li>
+      <li><a href="../index.html#breaking">Breaking</a></li>
+      <li><a href="../index.html#millennial-view">Millennial View</a></li>
+      <li><a href="../index.html#newsletter">Newsletter</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Pretplati se</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<main>
+  <div class="article-wrap">
+
+    <a href="../index.html" class="back-link">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Natrag na feed
+    </a>
+
+    <article>
+      <header>
+        <div class="article-category">Skriveni biseri</div>
+        <h1 class="article-title">Rakovice za znalce i početnike</h1>
+        <div class="article-meta">
+          <span class="article-author">Rene Bakalović</span>
+          <span class="meta-divider"></span>
+          <span class="article-date">28. travnja 2026.</span>
+        </div>
+        <img
+          src="../images/rakovice.png"
+          alt="Žive rakovice, lonac i domaći temeljac od rakova"
+          class="article-hero"
+        >
+      </header>
+
+      <div class="article-body">
+        <p>Žive rakovice ukazale su se na malom kiosku trešnjevačke tržnice u Zagrebu. Cijena šest eura za kilogram. Pravo veselje tek što se plac otvorio u sedam ujutro. Kupujem sve četiri, jutros su došle s Raba, još žive.</p>
+
+        <p>Zlobnici mi pokušavaju povariti gušt: nema tu mesa, samo oklop.</p>
+
+        <p>Točno, ali znam ja bolje.</p>
+
+        <p>Temeljac je temelj dobre kuhinje. Kada zavirim u neku restoransku kuhinju, prvo provjerim kuhaju li se temeljci. Kod mene doma uvijek ima temeljaca, najrazličitijih. Neupućeni sa strahopoštovanjem reagiraju na spomen temeljaca. Istina je sasvim suprotna. Temeljac je u pravilu vrlo jednostavna priprava. Svaki kuhar početnik brzo će se osvjedočiti. Ovaj od rakovica najbolji je dokaz. Razrezane rakovice prelio sam vodom i dodao - ništa. Čak ni sol. Potrošio sam samo vrijeme. Šest sati su se na niskoj temperaturi iskuhavale u moćan koncentrat divnog okusa mora. Bez ikakvog nadgledanja. Isključio sam štednjak, procijedio oko tri litre temeljca i spremio ga u tri posude u zamrzivač.</p>
+
+        <p>Opet si uzimam vremena da temeljito promislim u što ću ugraditi temeljac.</p>
+
+        <p>Za početak ovaj je temeljac primjeren temelj ovog novog portala, a kulinarske su izvedenice rakovog temeljca neograničene. Biti će to priča u nastavcima sa sretnim krajem u svakoj epizodi, jamčim.</p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <img src="../logo-full.png" alt="Rene Bakalović" class="footer-logo">
+    <div class="footer-brand">
+      <p>Urbana hrana i lifestyle. Što jede grad — svaki dan.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Sekcije</h4>
+        <ul>
+          <li><a href="../index.html#breaking">Breaking</a></li>
+          <li><a href="../index.html#millennial-view">Millennial View</a></li>
+          <li><a href="../index.html#feed">Feed</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Brend</h4>
+        <ul>
+          <li><a href="#">O nama</a></li>
+          <li><a href="#">Oglašavanje</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Prati</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="../index.html#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Rene Bakalović. Sva prava pridržana.</p>
+      <p style="color:var(--red);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;">FOOD. DRINK. CITY.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="../index.html" class="mobile-nav-item">
+      <img src="../RBlogo.png" alt="RB">
+      <span>Feed</span>
+    </a>
+    <a href="../index.html#breaking" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      <span>Breaking</span>
+    </a>
+    <a href="../index.html#millennial-view" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
+      <span>MV</span>
+    </a>
+    <a href="../index.html#newsletter" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+      <span>Newsletter</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>
