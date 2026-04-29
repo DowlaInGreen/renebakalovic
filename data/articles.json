@@ -1,5 +1,17 @@
 [
   {
+    "id": "mv-phse-2-testing-in-progress",
+    "title": "PHSE 2 TESTING IN PROGRESS",
+    "excerpt": "Druga faza testiranja u tijeku... Držimo fige…",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-29",
+    "dateLabel": "",
+    "image": "",
+    "url": "millennial-view/mv-phse-2-testing-in-progress.html"
+  },
+  {
     "id": "mv-phse-1-testing-success",
     "title": "PHSE 1 TESTING SUCCESS",
     "excerpt": "Prva faza uspješno implementirana. Druga faza puštena u pogon. #Placeholder image #Placeholder text…",
