@@ -12,6 +12,18 @@
     "url": "millennial-view/mv-sustav-vs-improvizacija.html"
   },
   {
+    "id": "mv-digitalni-asistent-restoran",
+    "title": "Zamislite svijet gdje…",
+    "excerpt": "Digitalni asistent koji radi 24/7 — odgovara na rezervacije, prima narudžbe, komunicira s dobavljačima. Gost ne vidi tehnologiju. On vidi odgovor u sekundi.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-24",
+    "dateLabel": "24. travnja 2026.",
+    "image": "images/mv-digitalni-asistent-restoran.png",
+    "url": "millennial-view/mv-digitalni-asistent-restoran.html"
+  },
+  {
     "id": "rakovice-za-znalce-i-pocetnike",
     "title": "Rakovice za znalce i početnike",
     "excerpt": "Žive rakovice s trešnjevačke tržnice, šest eura za kilo. Zlobnici kažu nema mesa — ali temeljac od rakova je moćan koncentrat mora koji vrijedi svaku sekundu čekanja.",
