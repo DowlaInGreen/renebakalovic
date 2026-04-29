@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primjer automatizacije u restoranu: No-Show · Millennial View · Rene Bakalović</title>
+  <meta name="description" content="No-show nije nesreća. No-show je propust u sustavu. Jedan message, jedan sat — i prazan stol postaje iznimka." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --accent:   #E6392F;
+      --black:    #0d0d0d;
+      --dark:     #141414;
+      --mid:      #1e1e1e;
+      --border:   #2a2a2a;
+      --muted:    #6b6b6b;
+      --light:    #c8c8c8;
+      --white:    #f5f5f5;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-label:   'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      height: 64px;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-label);
+      font-size: 1.35rem;
+      letter-spacing: 0.18em;
+      color: var(--white);
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-label);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      margin-top: 64px;
+      height: clamp(480px, 68vh, 780px);
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(0.48);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 30%,
+        rgba(13,13,13,0.6) 70%,
+        var(--black) 100%
+      );
+    }
+    .hero-content {
+      position: absolute;
+      bottom: clamp(2rem, 6vw, 4rem);
+      left: clamp(1.5rem, 8vw, 9rem);
+      right: clamp(1.5rem, 8vw, 9rem);
+      max-width: 860px;
+    }
+    .category-label {
+      display: inline-block;
+      font-family: var(--font-label);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--white);
+      text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+    }
+
+    /* ARTICLE */
+    .article-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 2rem);
+    }
+    .article-header {
+      padding: 2.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .meta-date {
+      font-family: var(--font-label);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .meta-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .author-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--mid);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.85rem;
+      border-radius: 2px;
+    }
+    .author-chip span {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--light);
+    }
+    .author-chip::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* BODY */
+    .article-body { padding-bottom: 5rem; }
+    .article-body p {
+      font-size: clamp(1rem, 1.8vw, 1.125rem);
+      line-height: 1.85;
+      color: var(--light);
+      margin-bottom: 1.6rem;
+    }
+    .article-body p:first-child {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.65;
+    }
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      margin: 2.5rem 0;
+      padding: 0.75rem 0 0.75rem 1.75rem;
+    }
+    .pull-quote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem) !important;
+      font-style: italic;
+      color: var(--white) !important;
+      line-height: 1.55 !important;
+      margin: 0 !important;
+    }
+    .article-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    .article-divider::before,
+    .article-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .article-divider span {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: var(--font-label);
+      font-size: 1.5rem;
+      letter-spacing: 0.2em;
+      color: var(--white);
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-tagline {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--muted);
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-content { left: 1.5rem; right: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">RENE <span>BAKALOVIĆ</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Naslovnica</a></li>
+      <li><a href="../index.html#food">Food</a></li>
+      <li><a href="../index.html#drink">Drink</a></li>
+      <li><a href="../index.html#city">City</a></li>
+      <li><a href="../index.html#millennial-view" class="active">Millennial View</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <img src="../images/mv-no-show-automatizacija.png" alt="Prazan stol za četvero u prepunom restoranu — no-show u čistom obliku" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="category-label">Millennial View</div>
+      <h1 class="hero-title">Primjer automatizacije u restoranu: No-Show</h1>
+    </div>
+  </div>
+
+  <main class="article-wrap">
+    <header class="article-header">
+      <div class="article-meta">
+        <span class="meta-date">20. travnja 2026.</span>
+        <div class="meta-dot"></div>
+        <div class="author-chip">
+          <span>Vlado Stipan · F&amp;B veteran &amp; AI specialist</span>
+        </div>
+      </div>
+    </header>
+
+    <article class="article-body">
+
+      <p>Rezervacija je obećanje. Ima ih koji to ne razumiju.</p>
+
+      <p>Stol za četvero (restoranskim slengom — 4 pax), petak navečer, osmišljen tjedan unaprijed. Kuhinja sprema, konobar zna raspored, manager drži taj stol slobodnim do zadnje sekunde. A onda — nitko. Telefon ne zvoni, poruka nema, gosti se jednostavno ne pojave. No-show u čistom obliku.</p>
+
+      <p>Industrija to poznaje. Prihvatila ga je kao neizbježnu pojavu, kao kišu ili lošeg dobavljača. Pogrešno.</p>
+
+      <div class="pull-quote">
+        <p>No-show nije nesreća. No-show je propust u sustavu.</p>
+      </div>
+
+      <div class="article-divider"><span>✦</span></div>
+
+      <p>Čovjek zaboravi. To je činjenica, ne izgovor. Rezervira u ponedjeljak, petak dođe, a mozak je već dalje. Nije loša volja — jednostavno nema podsjetnika koji ga vraća na obavezu. Tu ulazi automatizacija koja funkcionira bez romantike: ujutro na dan rezervacije ide poruka. Kratka, jasna — potvrdi ili otkaži. Ako u sat vremena nema odgovora, rezervacija se briše i stol se otvara.</p>
+
+      <p>Toliko.</p>
+
+      <div class="article-divider"><span>✦</span></div>
+
+      <p>Nikakva drama, nikakvo ucjenjivanje, nikakav sustav naplate penala koji gosti mrze i koji stvara lošu krv. Samo jedna poruka i jedan sat. Popunjenost raste, prazan stol postaje iznimka.</p>
+
+      <p>Ovo nije tehnologija budućnosti. Ovo je osnovna higijena poslovanja koja većini restorana još nedostaje.</p>
+
+      <p>Ovaj feature apsolutno svaki restoran može implementirati u manje od tjedan dana.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-logo">RENE <span>BAKALOVIĆ</span></div>
+    <div class="footer-tagline">Food · Drink · City</div>
+    <p class="footer-copy">&copy; 2026 Rene Bakalović. Sva prava pridržana.</p>
+  </footer>
+
+</body>
+</html>

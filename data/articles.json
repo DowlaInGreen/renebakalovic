@@ -1,5 +1,17 @@
 [
   {
+    "id": "mv-no-show-automatizacija",
+    "title": "Primjer automatizacije u restoranu: No-Show",
+    "excerpt": "No-show nije nesreća. No-show je propust u sustavu. Jedna poruka, jedan sat — prazan stol postaje iznimka.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-20",
+    "dateLabel": "20. travnja 2026.",
+    "image": "images/mv-no-show-automatizacija.png",
+    "url": "millennial-view/mv-no-show-automatizacija.html"
+  },
+  {
     "id": "mv-sustav-vs-improvizacija",
     "title": "Zašto su najbolji restorani oni koji najmanje improviziraju",
     "excerpt": "Restoran nije samo emocija i rapsodija okusa — restoran je firma. A firma živi ili umire na brojkama. Puno dobrih restorana ne propadne zbog hrane. Propadne jer vlasnik prestane gledati operativne podatke.",
