@@ -22,7 +22,6 @@
     html, body { width: 100%; overflow-x: hidden; }
     body { background: var(--charcoal); color: var(--off-white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
-    /* NAV */
     nav.topnav { background: var(--charcoal); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; width: 100%; }
     .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
@@ -30,103 +29,31 @@
     .logo-full { height: 28px; object-fit: contain; display: block; }
     .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
     .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; }
-    .nav-links a:hover, .nav-links a.active { color: var(--off-white); }
+    .nav-links a:hover { color: var(--off-white); }
     .nav-cta { background: var(--red) !important; color: #fff !important; padding: 8px 14px; }
 
-    /* ARTICLE */
     .article-wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
 
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-bottom: 40px;
-    }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; margin-bottom: 40px; }
     .back-link:hover { color: var(--off-white); }
     .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-    .article-category {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.4em;
-      color: var(--red);
-      margin-bottom: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .article-category::before {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 2px;
-      background: var(--red);
-    }
+    .article-category { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: var(--red); margin-bottom: 20px; display: inline-flex; align-items: center; gap: 10px; }
+    .article-category::before { content: ''; display: inline-block; width: 20px; height: 2px; background: var(--red); }
 
-    .article-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: clamp(32px, 7vw, 58px);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--off-white);
-      margin-bottom: 28px;
-    }
+    .article-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(32px, 7vw, 58px); line-height: 1.05; letter-spacing: -0.02em; color: var(--off-white); margin-bottom: 28px; }
 
-    .article-meta {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 36px;
-      flex-wrap: wrap;
-    }
-    .article-author {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--off-white);
-    }
-    .article-date {
-      font-size: 12px;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-    }
-    .meta-divider {
-      width: 3px;
-      height: 3px;
-      background: var(--red);
-      border-radius: 50%;
-    }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
+    .article-author { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--off-white); }
+    .article-date { font-size: 12px; color: var(--text-muted); }
+    .meta-divider { width: 3px; height: 3px; background: var(--red); border-radius: 50%; }
 
-    .article-hero {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      display: block;
-      margin-bottom: 48px;
-      border-bottom: 3px solid var(--red);
-    }
+    .article-hero { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin-bottom: 48px; border-bottom: 3px solid var(--red); }
 
-    .article-body {
-      font-size: 17px;
-      line-height: 1.85;
-      color: rgba(245, 240, 232, 0.88);
-    }
-    .article-body p {
-      margin-bottom: 28px;
-    }
-    .article-body p:last-child {
-      margin-bottom: 0;
-    }
+    .article-body { font-size: 17px; line-height: 1.85; color: rgba(245, 240, 232, 0.88); }
+    .article-body p { margin-bottom: 28px; }
+    .article-body p:last-child { margin-bottom: 0; }
 
-    /* FOOTER */
     footer { background: #111; border-top: 1px solid var(--border); padding: 40px 16px 80px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; }
     .footer-logo { height: 48px; object-fit: contain; display: block; margin-bottom: 12px; }
@@ -140,7 +67,6 @@
     .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
     .footer-bottom p { font-size: 11px; color: var(--text-muted); }
 
-    /* MOBILE NAV */
     .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #111; border-top: 1px solid var(--border); z-index: 200; }
     .mobile-nav-inner { display: flex; justify-content: space-around; align-items: center; height: 58px; }
     .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; flex: 1; justify-content: center; padding: 6px 0; }
@@ -161,7 +87,6 @@
 </head>
 <body>
 
-<!-- TOP NAV -->
 <nav class="topnav">
   <div class="nav-inner">
     <a href="../index.html" class="logo">
@@ -171,6 +96,7 @@
     <ul class="nav-links">
       <li><a href="../index.html">Feed</a></li>
       <li><a href="../index.html#breaking">Breaking</a></li>
+      <li><a href="../index.html#skriveni-biseri">Skriveni biseri</a></li>
       <li><a href="../index.html#millennial-view">Millennial View</a></li>
       <li><a href="../index.html#newsletter">Newsletter</a></li>
       <li><a href="../index.html#newsletter" class="nav-cta">Pretplati se</a></li>
@@ -178,15 +104,12 @@
   </div>
 </nav>
 
-<!-- ARTICLE -->
 <main>
   <div class="article-wrap">
-
     <a href="../index.html" class="back-link">
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
       Natrag na feed
     </a>
-
     <article>
       <header>
         <div class="article-category">Skriveni biseri</div>
@@ -196,32 +119,20 @@
           <span class="meta-divider"></span>
           <span class="article-date">28. travnja 2026.</span>
         </div>
-        <img
-          src="../images/rakovice.png"
-          alt="Žive rakovice, lonac i domaći temeljac od rakova"
-          class="article-hero"
-        >
+        <img src="../images/rakovice.png" alt="Žive rakovice, lonac i domaći temeljac od rakova" class="article-hero">
       </header>
-
       <div class="article-body">
         <p>Žive rakovice ukazale su se na malom kiosku trešnjevačke tržnice u Zagrebu. Cijena šest eura za kilogram. Pravo veselje tek što se plac otvorio u sedam ujutro. Kupujem sve četiri, jutros su došle s Raba, još žive.</p>
-
         <p>Zlobnici mi pokušavaju povariti gušt: nema tu mesa, samo oklop.</p>
-
         <p>Točno, ali znam ja bolje.</p>
-
         <p>Temeljac je temelj dobre kuhinje. Kada zavirim u neku restoransku kuhinju, prvo provjerim kuhaju li se temeljci. Kod mene doma uvijek ima temeljaca, najrazličitijih. Neupućeni sa strahopoštovanjem reagiraju na spomen temeljaca. Istina je sasvim suprotna. Temeljac je u pravilu vrlo jednostavna priprava. Svaki kuhar početnik brzo će se osvjedočiti. Ovaj od rakovica najbolji je dokaz. Razrezane rakovice prelio sam vodom i dodao - ništa. Čak ni sol. Potrošio sam samo vrijeme. Šest sati su se na niskoj temperaturi iskuhavale u moćan koncentrat divnog okusa mora. Bez ikakvog nadgledanja. Isključio sam štednjak, procijedio oko tri litre temeljca i spremio ga u tri posude u zamrzivač.</p>
-
         <p>Opet si uzimam vremena da temeljito promislim u što ću ugraditi temeljac.</p>
-
         <p>Za početak ovaj je temeljac primjeren temelj ovog novog portala, a kulinarske su izvedenice rakovog temeljca neograničene. Biti će to priča u nastavcima sa sretnim krajem u svakoj epizodi, jamčim.</p>
       </div>
     </article>
-
   </div>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <img src="../logo-full.png" alt="Rene Bakalović" class="footer-logo">
@@ -233,8 +144,9 @@
         <h4>Sekcije</h4>
         <ul>
           <li><a href="../index.html#breaking">Breaking</a></li>
+          <li><a href="../index.html#skriveni-biseri">Skriveni biseri</a></li>
+          <li><a href="../index.html#ispod-10-eura">Ispod 10€</a></li>
           <li><a href="../index.html#millennial-view">Millennial View</a></li>
-          <li><a href="../index.html#feed">Feed</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -261,7 +173,6 @@
   </div>
 </footer>
 
-<!-- MOBILE BOTTOM NAV -->
 <nav class="mobile-nav">
   <div class="mobile-nav-inner">
     <a href="../index.html" class="mobile-nav-item">
