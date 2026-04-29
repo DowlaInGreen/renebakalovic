@@ -1,15 +1,15 @@
 [
   {
-    "id": "prava-kombucha-nema-mane",
-    "title": "Prava kombucha nema mane",
-    "excerpt": "U Medakovom bistrou Bar & Ton u MSU-u naručujem kombuchu od mente i odmah zatim još jednu. Ekipa Products iz Zagreba napravila je nešto pametno — od dizajna do mjehurića.",
-    "category": "skriveni-biseri",
-    "categoryLabel": "Skriveni biseri",
-    "author": "Rene Bakalović",
-    "date": "2026-04-26",
-    "dateLabel": "26. travnja 2026.",
-    "image": "images/kultura-kombucha.png",
-    "url": "skriveni-biseri/prava-kombucha-nema-mane.html"
+    "id": "mv-sustav-vs-improvizacija",
+    "title": "Zašto su najbolji restorani oni koji najmanje improviziraju",
+    "excerpt": "Restoran nije samo emocija i rapsodija okusa — restoran je firma. A firma živi ili umire na brojkama. Puno dobrih restorana ne propadne zbog hrane. Propadne jer vlasnik prestane gledati operativne podatke.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-29",
+    "dateLabel": "29. travnja 2026.",
+    "image": "images/mv-sustav-vs-improvizacija.png",
+    "url": "millennial-view/mv-sustav-vs-improvizacija.html"
   },
   {
     "id": "rakovice-za-znalce-i-pocetnike",
@@ -22,5 +22,17 @@
     "dateLabel": "28. travnja 2026.",
     "image": "images/rakovice.png",
     "url": "skriveni-biseri/rakovice-za-znalce-i-pocetnike.html"
+  },
+  {
+    "id": "prava-kombucha-nema-mane",
+    "title": "Prava kombucha nema mane",
+    "excerpt": "U Medakovom bistrou Bar & Ton u MSU-u naručujem kombuchu od mente i odmah zatim još jednu. Ekipa Products iz Zagreba napravila je nešto pametno — od dizajna do mjehurića.",
+    "category": "skriveni-biseri",
+    "categoryLabel": "Skriveni biseri",
+    "author": "Rene Bakalović",
+    "date": "2026-04-26",
+    "dateLabel": "26. travnja 2026.",
+    "image": "images/kultura-kombucha.png",
+    "url": "skriveni-biseri/prava-kombucha-nema-mane.html"
   }
 ]
