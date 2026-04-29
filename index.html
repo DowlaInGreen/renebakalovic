@@ -81,7 +81,7 @@
   .mv-label { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
   .mv-band h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(26px, 7vw, 44px); color: #fff; letter-spacing: -0.02em; margin-bottom: 10px; }
   .mv-band p { font-size: 13px; color: rgba(255,255,255,0.75); max-width: 520px; line-height: 1.6; }
-  .card.mv-card .card-category, .card.mv-card .card-read, .card.mv-card .card-image { color: #1B3A5C; border-bottom-color: #1B3A5C; } .mv-empty { background: rgba(230,57,47,0.05); border: 1px dashed rgba(230,57,47,0.2); padding: 48px 16px; text-align: center; margin-bottom: 48px; }
+  .mv-empty { background: rgba(230,57,47,0.05); border: 1px dashed rgba(230,57,47,0.2); padding: 48px 16px; text-align: center; margin-bottom: 48px; }
   .mv-empty h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--off-white); margin-bottom: 8px; }
   .mv-empty p { font-size: 13px; color: var(--text-muted); }
   .author-chip { display: inline-flex; align-items: center; gap: 8px; background: rgba(230,57,47,0.1); border: 1px solid rgba(230,57,47,0.25); padding: 6px 14px; margin-top: 14px; }
@@ -371,7 +371,7 @@
         } else if (article.category === 'ispod-10-eura') {
           grids.ispod.appendChild(buildCard(article));
           counts.ispod++;
-        } else if (article.category === 'millennial-view') { card.classList.add('mv-card');
+        } else if (article.category === 'millennial-view') {
           grids.mv.appendChild(buildCard(article));
           counts.mv++;
         }
