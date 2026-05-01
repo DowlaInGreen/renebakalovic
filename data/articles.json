@@ -1,5 +1,17 @@
 [
   {
+    "id": "zadarski-visoki-turizam",
+    "title": "Zadarski visoki turizam",
+    "excerpt": "Kinez je Dalmatinac, kafić se zove Doma, a tri koraka niže Leo u Pjatu servira orzot sa sipama koji jedva stane uz savajaču od jabuka. Ovako se jede Zadar kad te lokaliziraju pravi ljudi.",
+    "category": "samo-kod-nas",
+    "categoryLabel": "Samo kod nas",
+    "author": "Rene Bakalović",
+    "date": "2026-05-30",
+    "dateLabel": "30. svibnja 2026.",
+    "image": "images/zadar1.png",
+    "url": "samo-kod-nas/zadarski-visoki-turizam.html"
+  },
+  {
     "id": "akcija-kokos",
     "title": "Akcija Kokoš",
     "excerpt": "Akcija Kokoš nasmije me svaki put na Trešnjevačkom placu. Skupljam bizarne i duhovite poruke s tržnica — i pozivam vas da šaljete svoje ulovke.",
