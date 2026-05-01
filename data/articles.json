@@ -12,6 +12,18 @@
     "url": "samo-kod-nas/akcija-kokos.html"
   },
   {
+    "id": "mv-sustav-vs-improvizacija",
+    "title": "Zašto su najbolji restorani oni koji najmanje improviziraju",
+    "excerpt": "Restoran nije samo emocija i rapsodija okusa — restoran je firma. A firma živi ili umire na brojkama. Puno dobrih restorana ne propadne zbog hrane. Propadne jer vlasnik prestane gledati operativne podatke.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-29",
+    "dateLabel": "29. travnja 2026.",
+    "image": "images/mv-sustav-vs-improvizacija.png",
+    "url": "millennial-view/mv-sustav-vs-improvizacija.html"
+  },
+  {
     "id": "rakovice-za-znalce-i-pocetnike",
     "title": "Rakovice za znalce i početnike",
     "excerpt": "Žive rakovice s trešnjevačke tržnice, šest eura za kilo. Zlobnici kažu nema mesa — ali temeljac od rakova je moćan koncentrat mora koji vrijedi svaku sekundu čekanja.",
@@ -22,6 +34,30 @@
     "dateLabel": "28. travnja 2026.",
     "image": "images/rakovice.png",
     "url": "skriveni-biseri/rakovice-za-znalce-i-pocetnike.html"
+  },
+  {
+    "id": "mv-digitalni-asistent-restoran",
+    "title": "Zamislite svijet gdje…",
+    "excerpt": "Digitalni asistent koji radi 24/7 — odgovara na rezervacije, prima narudžbe, komunicira s dobavljačima. Gost ne vidi tehnologiju. On vidi odgovor u sekundi.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-24",
+    "dateLabel": "24. travnja 2026.",
+    "image": "images/mv-digitalni-asistent-restoran.png",
+    "url": "millennial-view/mv-digitalni-asistent-restoran.html"
+  },
+  {
+    "id": "mv-no-show-automatizacija",
+    "title": "Primjer automatizacije u restoranu: No-Show",
+    "excerpt": "No-show nije nesreća. No-show je propust u sustavu. Jedna poruka, jedan sat — prazan stol postaje iznimka.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-20",
+    "dateLabel": "20. travnja 2026.",
+    "image": "images/mv-no-show-automatizacija.png",
+    "url": "millennial-view/mv-no-show-automatizacija.html"
   },
   {
     "id": "prava-kombucha-nema-mane",
