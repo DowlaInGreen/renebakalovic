@@ -1,276 +1,421 @@
 <!DOCTYPE html>
-<html lang="hr" class="scroll-smooth">
+<html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VSS Digital | AI Automatizacija za Mali Biznis u Hrvatskoj</title>
-  <meta name="description" content="AI rješenja koja vam vraćaju 10+ sati tjedno. Automatizacija za frizerske salone, restorane, knjigovodstva i građevinske firme. Bez IT znanja, setup u 3-7 dana.">
-  <meta name="keywords" content="AI automatizacija, automatizacija poslovanja, WhatsApp bot, booking sustav, digitalna transformacija, mali biznis, Hrvatska, Zagreb, Persona Lex, LLM Morph">
-  <meta name="author" content="VSS Digital">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.vssdigital.online/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.vssdigital.online/">
-  <meta property="og:title" content="VSS Digital | AI Automatizacija za Mali Biznis">
-  <meta property="og:description" content="AI rješenja koja vam vraćaju 10+ sati tjedno.">
-  <meta property="og:image" content="https://www.vssdigital.online/images/logo-vss.png">
-  <meta property="og:locale" content="hr_HR">
-  <meta name="geo.region" content="HR-21">
-  <meta name="geo.placename" content="Zagreb">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#6366f1">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"VSS Digital","description":"AI automatizacija za mali biznis","url":"https://www.vssdigital.online","telephone":"+385-91-977-9716","email":"vssdigital-online@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Zagreb","addressCountry":"HR"},"priceRange":"50€-150€"}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{primary:{DEFAULT:'#6366f1',foreground:'#ffffff'},accent:'#a78bfa',muted:{DEFAULT:'#f3f4f6',foreground:'#6b7280'},card:'#ffffff',border:'#e5e7eb',background:'#ffffff',foreground:'#0f172a'},fontFamily:{display:['Inter','sans-serif'],brand:['Rajdhani','sans-serif']}}}}</script>
-  <style>
-    .text-gradient{background:linear-gradient(135deg,#6366f1 0%,#a78bfa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .bg-gradient-primary{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%)}
-    .bg-gradient-hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%)}
-    .shadow-glow{box-shadow:0 10px 40px rgba(99,102,241,0.3)}
-    .shadow-card{box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-    .shadow-card-hover{box-shadow:0 10px 25px rgba(0,0,0,0.1)}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-    .animate-float{animation:float 6s ease-in-out infinite}
-    input[type=range]::-webkit-slider-thumb{appearance:none;width:20px;height:20px;border-radius:50%;background:#6366f1;cursor:pointer}
-    input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#6366f1;cursor:pointer;border:none}
-    .product-card{position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
-    .product-card:hover{transform:translateY(-3px)}
-    .product-card.lex{background:linear-gradient(135deg,rgba(30,20,50,.95),rgba(20,15,40,.98));border:1px solid rgba(155,89,182,.3)}
-    .product-card.morph{background:linear-gradient(135deg,rgba(15,20,40,.95),rgba(10,15,35,.98));border:1px solid rgba(79,142,247,.25)}
-    .product-bar{position:absolute;top:0;left:0;right:0;height:3px}
-    .product-bar.lex{background:linear-gradient(90deg,#9B59B6,#7c6df0)}
-    .product-bar.morph{background:linear-gradient(90deg,#4F8EF7,#00d4ff)}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rene Bakalović — Food. Drink. City.</title>
+<meta name="description" content="Urbana hrana i lifestyle. Što jede grad — svaki dan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="RBlogo.png">
+<style>
+  :root {
+    --red: #E6392F;
+    --charcoal: #1A1A1A;
+    --off-white: #F5F0E8;
+    --mid-grey: #2C2C2C;
+    --text-muted: #888;
+    --border: rgba(255,255,255,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; overflow-x: hidden; }
+  body { background: var(--charcoal); color: var(--off-white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav.topnav { background: var(--charcoal); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; width: 100%; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .logo-rb { height: 36px; width: 36px; object-fit: contain; display: block; }
+  .logo-full { height: 28px; object-fit: contain; display: block; }
+  .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+  .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; }
+  .nav-links a:hover, .nav-links a.active { color: var(--off-white); }
+  .nav-cta { background: var(--red) !important; color: #fff !important; padding: 8px 14px; }
+
+  /* HERO */
+  .hero { background: url("Rene_banner.png") center/cover no-repeat; position: relative; border-bottom: 3px solid var(--red); padding: 60px 16px 40px; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: rgba(26,26,26,0.88); z-index: 0; }
+  .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-eyebrow { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 0.4em; color: var(--red); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .hero-eyebrow::after { content: ''; flex: 0 0 32px; height: 1px; background: var(--red); opacity: 0.5; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(32px, 8vw, 72px); line-height: 1.05; color: var(--off-white); letter-spacing: -0.02em; margin-bottom: 16px; }
+  .hero-sub { font-size: 17px; color: #FFFFFF; font-weight: 400; line-height: 1.65; margin-bottom: 28px; max-width: 480px; }
+  .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-primary { background: var(--red); color: #fff; padding: 12px 22px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; display: inline-block; }
+  .btn-ghost { color: var(--off-white); border: 1px solid rgba(245,240,232,0.25); padding: 11px 22px; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; display: inline-block; }
+
+  /* CONTENT */
+  .content { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+  .section-header { display: flex; align-items: baseline; justify-content: space-between; padding: 40px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 28px; gap: 12px; flex-wrap: wrap; }
+  .section-header h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(24px, 6vw, 38px); color: var(--off-white); letter-spacing: -0.02em; position: relative; }
+  .section-header h2::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 24px; height: 3px; background: var(--red); }
+  .section-meta { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+
+  /* ARTICLE CARDS */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px; }
+  .card { background: var(--mid-grey); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.15s ease; }
+  .card:hover { transform: translateY(-3px); }
+  .card-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-bottom: 2px solid var(--red); }
+  .card-image-placeholder { width: 100%; aspect-ratio: 16/9; background: #222; border-bottom: 2px solid var(--red); display: flex; align-items: center; justify-content: center; }
+  .card-image-placeholder img { width: 32px; height: 32px; object-fit: contain; opacity: 0.3; }
+  .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .card-category { font-family: 'Bebas Neue', sans-serif; font-size: 10px; letter-spacing: 0.35em; color: var(--red); }
+  .card-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px; line-height: 1.25; color: var(--off-white); }
+  .card-excerpt { font-size: 13px; color: var(--text-muted); line-height: 1.6; flex: 1; }
+  .card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+  .card-author { font-size: 11px; color: var(--text-muted); }
+  .card-date { font-size: 11px; color: var(--text-muted); }
+  .card-read { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-top: 12px; }
+
+  /* SAMO KOD NAS — poseban styling */
+  .skn-band { background: var(--mid-grey); border-top: 3px solid var(--red); border-bottom: 1px solid var(--border); padding: 40px 16px 0; margin-top: 8px; }
+  .skn-band-inner { max-width: 1200px; margin: 0 auto; }
+  .skn-label { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: var(--red); margin-bottom: 8px; }
+  .skn-band h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(26px, 7vw, 44px); color: var(--off-white); letter-spacing: -0.02em; margin-bottom: 10px; position: relative; display: inline-block; }
+  .skn-band h2::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 24px; height: 3px; background: var(--red); }
+  .skn-band p { font-size: 13px; color: var(--text-muted); max-width: 520px; line-height: 1.6; margin-top: 16px; margin-bottom: 28px; }
+
+  /* EMPTY STATE */
+  .empty-state { padding: 56px 16px; text-align: center; margin-bottom: 48px; border: 1px dashed rgba(255,255,255,0.08); }
+  .empty-icon { width: 44px; height: 44px; border: 1.5px solid var(--red); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+  .empty-icon img { width: 28px; height: 28px; object-fit: contain; }
+  .empty-state h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--off-white); margin-bottom: 8px; }
+  .empty-state p { font-size: 13px; color: var(--text-muted); max-width: 280px; margin: 0 auto; line-height: 1.6; }
+
+  /* MILLENNIAL VIEW */
+  .mv-band { background: url("mv-banner.png") center/cover no-repeat; position: relative; padding: 40px 16px 32px; margin-top: 8px; }
+  .mv-band::before { content: ""; position: absolute; inset: 0; background: rgba(10,22,40,0.75); z-index: 0; }
+  .mv-band-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .mv-label { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
+  .mv-band h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(26px, 7vw, 44px); color: #fff; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .mv-band p { font-size: 13px; color: rgba(255,255,255,0.75); max-width: 520px; line-height: 1.6; }
+  .author-chip { display: inline-flex; align-items: center; gap: 8px; background: rgba(230,57,47,0.1); border: 1px solid rgba(230,57,47,0.25); padding: 6px 14px; margin-top: 14px; }
+  .author-chip span { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); }
+
+  /* NEWSLETTER */
+  .newsletter { background: var(--mid-grey); border-top: 3px solid var(--red); border-bottom: 1px solid var(--border); padding: 48px 16px; text-align: center; }
+  .newsletter-eyebrow { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.35em; color: var(--red); margin-bottom: 12px; }
+  .newsletter h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(22px, 6vw, 42px); line-height: 1.1; color: var(--off-white); margin: 0 auto 12px; letter-spacing: -0.02em; }
+  .newsletter p { font-size: 13px; color: var(--text-muted); max-width: 380px; margin: 0 auto 24px; line-height: 1.6; }
+  .newsletter-form { display: flex; flex-direction: column; gap: 0; max-width: 400px; margin: 0 auto 14px; }
+  .newsletter-form input { background: rgba(245,240,232,0.06); border: 1px solid rgba(245,240,232,0.15); color: var(--off-white); padding: 14px 16px; font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none; width: 100%; }
+  .newsletter-form input::placeholder { color: var(--text-muted); }
+  .newsletter-form input:focus { border-color: var(--red); }
+  .newsletter-form button { background: var(--red); border: none; color: #fff; padding: 14px 20px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; width: 100%; margin-top: 2px; }
+  .newsletter-social { font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; }
+
+  /* FOOTER */
+  footer { background: #111; border-top: 1px solid var(--border); padding: 40px 16px 80px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-logo { height: 48px; object-fit: contain; display: block; margin-bottom: 12px; }
+  .footer-brand p { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 32px; }
+  .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; }
+  .footer-col h4 { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
+  .footer-col ul li a:hover { color: var(--off-white); }
+  .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-bottom p { font-size: 11px; color: var(--text-muted); }
+
+  /* MOBILE BOTTOM NAV */
+  .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #111; border-top: 1px solid var(--border); z-index: 200; }
+  .mobile-nav-inner { display: flex; justify-content: space-around; align-items: center; height: 58px; }
+  .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; flex: 1; justify-content: center; padding: 6px 0; }
+  .mobile-nav-item svg { width: 20px; height: 20px; stroke: var(--text-muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .mobile-nav-item.active svg { stroke: var(--red); }
+  .mobile-nav-item span { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+  .mobile-nav-item.active span { color: var(--red); }
+  .mobile-nav-item img { width: 26px; height: 26px; object-fit: contain; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .mobile-nav { display: block; }
+    .nav-links { display: none; }
+    .logo-full { display: none; }
+    body { padding-bottom: 58px; }
+    .footer-cols { grid-template-columns: repeat(2, 1fr); }
+    .cards-grid { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 769px) {
+    .newsletter-form { flex-direction: row; }
+    .newsletter-form input { border-right: none; }
+    .newsletter-form button { width: auto; margin-top: 0; }
+  }
+</style>
 </head>
-<body class="font-sans antialiased">
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-sm border-b border-white/10">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-3">
-        <img src="/images/logo-vss.png" alt="VSS Digital" style="height:38px;width:38px;border-radius:8px;object-fit:cover;">
-      </a>
-      <div class="hidden md:flex items-center gap-8 text-sm text-white/70">
-        <a href="#rjesenja" class="hover:text-white transition-colors">Rješenja</a>
-        <a href="#kako-radi" class="hover:text-white transition-colors">Kako radi</a>
-        <a href="#industrije" class="hover:text-white transition-colors">Industrije</a>
-        <a href="#sustavi" class="hover:text-white transition-colors flex items-center gap-1.5">Sustavi <span style="background:linear-gradient(135deg,#6366f1,#a78bfa);font-size:0.65rem;padding:2px 8px;border-radius:999px;color:white;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Novo</span></a>
-        <a href="#cijene" class="hover:text-white transition-colors">Cijene</a>
-        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
-        <a href="https://osnove.vssdigital.online" class="hover:text-white transition-colors">AI Osnove</a>
-        <a href="https://novosti.vssdigital.online" class="hover:text-white transition-colors">AI Novosti</a>
-      </div>
-      <a href="#kontakt" class="bg-gradient-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm">Besplatna analiza</a>
-    </div>
-  </nav>
+<body>
 
-  <!-- Hero -->
-  <section id="hero" class="relative min-h-screen bg-gradient-hero overflow-hidden flex items-center" style="padding-top:90px;">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]"></div>
-    <div class="container mx-auto px-4 py-20 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6"><span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span><span class="text-xs font-medium text-white/80">Već pomažemo 20+ biznisa u Hrvatskoj</span></div>
-          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">Automatiziramo vaš posao dok vi radite <span class="text-gradient">ono što volite</span></h1>
-          <p class="text-lg text-white/60 mb-8 max-w-lg">AI rješenja koja vam vraćaju <strong class="text-white/90">10+ sati tjedno</strong> — bez IT znanja, bez kompleksnosti. Setup u 3-7 dana.</p>
-          <div class="flex flex-col sm:flex-row gap-4 mb-10">
-            <a href="#kontakt" class="bg-gradient-primary text-white px-8 py-4 rounded-xl text-base font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2 shadow-glow">Zakaži besplatnu analizu →</a>
-            <a href="#kako-radi" class="border border-white/20 text-white/80 px-8 py-4 rounded-xl text-base font-semibold hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-2">▶ Pogledaj kako radi</a>
-          </div>
-          <div class="flex items-center gap-6 text-white/40 text-xs"><span>Koristimo:</span><div class="flex items-center gap-4 font-medium text-white/50"><span>Claude AI</span><span>•</span><span>Make</span><span>•</span><span>n8n</span><span>•</span><span>WhatsApp API</span></div></div>
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="RBlogo.png" alt="RB" class="logo-rb">
+      <img src="logo-full.png" alt="Rene Bakalović — Food. Drink. City." class="logo-full">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Feed</a></li>
+      <li><a href="#breaking">Breaking</a></li>
+      <li><a href="#skriveni-biseri">Skriveni biseri</a></li>
+      <li><a href="#samo-kod-nas">Samo kod nas</a></li>
+      <li><a href="#millennial-view">Millennial View</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+      <li><a href="#newsletter" class="nav-cta">Pretplati se</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">FOOD. DRINK. CITY.</p>
+    <h1>Što jede grad upravo sad.</h1>
+    <p class="hero-sub">Prava hrana. Prava mjesta. Nula PR-a. Nova otvorenja, skriveni biseri i ulični kaos koji vrijedi tvog novca.</p>
+    <div class="hero-actions">
+      <a href="#breaking" class="btn-primary">Breaking News</a>
+      <a href="#newsletter" class="btn-ghost">Petak Drop</a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+  <!-- FEED -->
+  <section id="feed">
+    <div class="section-header">
+      <h2>Feed</h2>
+      <span class="section-meta" id="feed-count"></span>
+    </div>
+    <div class="cards-grid" id="feed-grid"></div>
+  </section>
+
+  <!-- BREAKING NEWS -->
+  <section id="breaking">
+    <div class="section-header">
+      <h2>Breaking News</h2>
+      <span class="section-meta" id="breaking-count"></span>
+    </div>
+    <div class="cards-grid" id="breaking-grid"></div>
+  </section>
+
+  <!-- SKRIVENI BISERI -->
+  <section id="skriveni-biseri">
+    <div class="section-header">
+      <h2>Skriveni biseri</h2>
+      <span class="section-meta" id="biseri-count"></span>
+    </div>
+    <div class="cards-grid" id="biseri-grid"></div>
+  </section>
+
+  <!-- ISPOD 10 EURA -->
+  <section id="ispod-10-eura">
+    <div class="section-header">
+      <h2>Ispod 10€</h2>
+      <span class="section-meta" id="ispod-count"></span>
+    </div>
+    <div class="cards-grid" id="ispod-grid"></div>
+  </section>
+
+</div>
+
+<!-- SAMO KOD NAS -->
+<section id="samo-kod-nas">
+  <div class="skn-band">
+    <div class="skn-band-inner">
+      <p class="skn-label">Ekskluzivno</p>
+      <h2>Samo kod nas</h2>
+      <p>Priče koje ne možeš pronaći nigdje drugdje. Ulovi s tržnica, bizarnosti iz grada, humor koji samo znalac prepozna.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="cards-grid" id="skn-grid"></div>
+  </div>
+</section>
+
+<!-- MILLENNIAL VIEW -->
+<section id="millennial-view">
+  <div class="mv-band">
+    <div class="mv-band-inner">
+      <p class="mv-label">Kolumna</p>
+      <h2>Millennial View</h2>
+      <p>F&amp;B industrija iznutra. AI koji mijenja kako grad jede. Perspektiva koja ne dolazi s ulice — dolazi iz kuhinje, managementa i tehnologije.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="cards-grid" id="mv-grid"></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="newsletter">
+  <p class="newsletter-eyebrow">Petak Drop · Besplatno</p>
+  <h2>5 mjesta gdje bismo stvarno jeli ovaj vikend.</h2>
+  <p>Jedan mail. Petak ujutro. Bez fila, bez PR-a.</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="tvoj@email.com">
+    <button type="button">Prijavi se</button>
+  </div>
+  <p class="newsletter-social">Odjava bilo kada.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <img src="logo-full.png" alt="Rene Bakalović" class="footer-logo">
+    <div class="footer-brand">
+      <p>Urbana hrana i lifestyle. Što jede grad — svaki dan.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Sekcije</h4>
+        <ul>
+          <li><a href="#breaking">Breaking</a></li>
+          <li><a href="#skriveni-biseri">Skriveni biseri</a></li>
+          <li><a href="#ispod-10-eura">Ispod 10€</a></li>
+          <li><a href="#samo-kod-nas">Samo kod nas</a></li>
+          <li><a href="#millennial-view">Millennial View</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Brend</h4>
+        <ul>
+          <li><a href="#">O nama</a></li>
+          <li><a href="#">Oglašavanje</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Prati</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Rene Bakalović. Sva prava pridržana.</p>
+      <p style="color:var(--red);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;">FOOD. DRINK. CITY.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="/" class="mobile-nav-item active">
+      <img src="RBlogo.png" alt="RB">
+      <span>Feed</span>
+    </a>
+    <a href="#breaking" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      <span>Breaking</span>
+    </a>
+    <a href="#samo-kod-nas" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+      <span>Samo kod nas</span>
+    </a>
+    <a href="#millennial-view" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
+      <span>MV</span>
+    </a>
+    <a href="#newsletter" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+      <span>Newsletter</span>
+    </a>
+  </div>
+</nav>
+
+<script>
+  function buildCard(article) {
+    const card = document.createElement('a');
+    card.className = 'card';
+    card.href = article.url;
+    const imageHTML = article.image
+      ? `<img class="card-image" src="${article.image}" alt="${article.title}" loading="lazy">`
+      : `<div class="card-image-placeholder"><img src="RBlogo.png" alt="RB"></div>`;
+    card.innerHTML = `
+      ${imageHTML}
+      <div class="card-body">
+        <div class="card-category">${article.categoryLabel}</div>
+        <div class="card-title">${article.title}</div>
+        <div class="card-excerpt">${article.excerpt}</div>
+        <div class="card-meta">
+          <span class="card-author">${article.author}</span>
+          <span class="card-date">${article.dateLabel}</span>
         </div>
-        <div class="relative"><div class="animate-float"><img src="laptop.png" alt="AI Dashboard" class="w-full rounded-2xl shadow-glow"></div></div>
+        <div class="card-read">Čitaj →</div>
       </div>
-    </div>
-  </section>
+    `;
+    return card;
+  }
 
-  <!-- Pain Points -->
-  <section id="rjesenja" class="py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16"><h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Prepoznajete li se?</h2><p class="text-muted-foreground max-w-lg mx-auto">Ovo su najčešći problemi koje riješimo u prvih 7 dana.</p></div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-shadow border border-border">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
-          <h3 class="font-display text-xl font-semibold mb-3">Propuštate klijente?</h3>
-          <p class="text-muted-foreground text-sm mb-6">Potencijalni klijent vam je promaknuo jer niste odgovorili na poruku u 5 minuta. Vaš konkurent je bio brži.</p>
-          <div class="border-t border-border pt-4"><span class="text-3xl font-display font-bold text-gradient">67%</span><p class="text-xs text-muted-foreground mt-1">klijenata ode konkurenciji ako ne odgovorite u 10 min</p></div>
-        </div>
-        <div class="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-shadow border border-border">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-          <h3 class="font-display text-xl font-semibold mb-3">Gubite vrijeme?</h3>
-          <p class="text-muted-foreground text-sm mb-6">Vaši zaposlenici provode 2+ sata dnevno prepisujući iste podatke i odgovarajući na ista pitanja.</p>
-          <div class="border-t border-border pt-4"><span class="text-3xl font-display font-bold text-gradient">2h</span><p class="text-xs text-muted-foreground mt-1">dnevno se troši na repetitivne zadatke</p></div>
-        </div>
-        <div class="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-shadow border border-border">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg></div>
-          <h3 class="font-display text-xl font-semibold mb-3">Gubite novac?</h3>
-          <p class="text-muted-foreground text-sm mb-6">30% zakazanih termina se ne pojavi jer niste stigli poslati podsjetnik.</p>
-          <div class="border-t border-border pt-4"><span class="text-3xl font-display font-bold text-gradient">30%</span><p class="text-xs text-muted-foreground mt-1">termina propada bez automatskih podsjetnika</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- How It Works -->
-  <section id="kako-radi" class="py-24" style="background-color:#fafafa;">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16"><h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Kako funkcionira?</h2><p class="text-muted-foreground max-w-lg mx-auto">Od prvog poziva do potpune automatizacije — u samo 3 koraka.</p></div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center"><div class="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mx-auto mb-6 shadow-glow"><svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">KORAK 01</span><h3 class="font-display text-xl font-semibold mb-3">Zakaži analizu</h3><p class="text-muted-foreground text-sm max-w-xs mx-auto">Besplatan 30-minutni poziv. Identificiramo 3 ključna problema u vašem poslovanju.</p></div>
-        <div class="text-center"><div class="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mx-auto mb-6 shadow-glow"><svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">KORAK 02</span><h3 class="font-display text-xl font-semibold mb-3">Dobij custom plan</h3><p class="text-muted-foreground text-sm max-w-xs mx-auto">Kreiramo prilagođeno rješenje s jasnim ROI-jem. Bez obaveza, bez skrivenih troškova.</p></div>
-        <div class="text-center"><div class="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mx-auto mb-6 shadow-glow"><svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">KORAK 03</span><h3 class="font-display text-xl font-semibold mb-3">Automatizacija radi za tebe</h3><p class="text-muted-foreground text-sm max-w-xs mx-auto">Setup u 3-7 dana. Vaš posao radi 24/7, a vi se fokusirate na ono što je važno.</p></div>
-      </div>
-    </div>
-  </section>
+  function emptyState(msg) {
+    const div = document.createElement('div');
+    div.className = 'empty-state';
+    div.innerHTML = `
+      <div class="empty-icon"><img src="RBlogo.png" alt="RB"></div>
+      <h3>${msg}</h3>
+      <p>Priče dolaze uskoro. Bez fila.</p>
+    `;
+    return div;
+  }
 
-  <!-- Industries -->
-  <section id="industrije" class="py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16"><h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Rješenja po industrijama</h2><p class="text-muted-foreground max-w-lg mx-auto">Svako rješenje je prilagođeno specifičnim potrebama vaše industrije.</p></div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all"><div class="flex items-start gap-5"><div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/></svg></div><div class="flex-1"><h3 class="font-display text-xl font-semibold mb-4">Frizerski saloni</h3><ul class="space-y-2 mb-5"><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Automatsko zakazivanje preko Instagrama/WhatsAppa</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Podsjetnik whatsappom na dan termina</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Automatski odgovori na najčešća pitanja</li></ul><div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5"><span class="text-xs font-semibold text-primary">90% manje propuštenih termina</span></div></div></div></div>
-        <div class="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all"><div class="flex items-start gap-5"><div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div><div class="flex-1"><h3 class="font-display text-xl font-semibold mb-4">Restorani</h3><ul class="space-y-2 mb-5"><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Automatizacija narudžbi i rezervacija</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Integracija sa dostavama</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Real-time praćenje zaliha</li></ul><div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5"><span class="text-xs font-semibold text-primary">80% manje operativnih grešaka</span></div></div></div></div>
-        <div class="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all"><div class="flex items-start gap-5"><div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div><div class="flex-1"><h3 class="font-display text-xl font-semibold mb-4">Knjigovodstva & Pravnici</h3><ul class="space-y-2 mb-5"><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Automatsko prikupljanje dokumenata</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>AI asistent za scheduling</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Automatski follow-up</li></ul><div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5"><span class="text-xs font-semibold text-primary">60% manje administracije</span></div></div></div></div>
-        <div class="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all"><div class="flex items-start gap-5"><div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><div class="flex-1"><h3 class="font-display text-xl font-semibold mb-4">Građevinske firme</h3><ul class="space-y-2 mb-5"><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Automatizacija ponuda i fakturiranja</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Praćenje projekata i materijala</li><li class="text-sm text-muted-foreground flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>Digitalni izvještaji</li></ul><div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5"><span class="text-xs font-semibold text-primary">10+ sati uštede tjedno</span></div></div></div></div>
-      </div>
-    </div>
-  </section>
+  fetch('data/articles.json')
+    .then(r => r.json())
+    .then(articles => {
+      articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  <!-- STANDALONE SYSTEMS -->
-  <section id="sustavi" class="py-24 bg-gradient-hero overflow-hidden relative">
-    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full opacity-10 blur-[120px]" style="background:#6366f1;"></div>
-    <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full opacity-10 blur-[100px]" style="background:#a78bfa;"></div>
-    <div class="container mx-auto px-4 relative">
-      <div class="text-center mb-14">
-        <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6"><span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span><span class="text-xs font-medium text-white/80">Naši AI sustavi — producirani i testirani</span></div>
-        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Samostalni sustavi</h2>
-        <p class="text-white/50 max-w-xl mx-auto">Namjenski AI sustavi. Postavljeni. Održavani. Vaši.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div class="product-card lex rounded-2xl p-8">
-          <div class="product-bar lex"></div>
-          <img src="/images/logo-persona-lex.png" alt="Persona Lex" style="width:60px;height:60px;border-radius:12px;object-fit:cover;margin-bottom:16px;">
-          <div class="flex items-start justify-between mb-4"><div><h3 style="font-family:'Rajdhani',sans-serif;font-size:26px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#e2e8f0;margin:0;">Persona Lex</h3><span style="display:inline-block;margin-top:4px;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:rgba(155,89,182,0.2);color:#c49cde;">Legal AI</span></div><span style="padding:4px 10px;border-radius:10px;font-size:11px;font-weight:600;background:rgba(34,197,94,0.15);color:#4ade80;">Live</span></div>
-          <p class="text-white/60 text-sm leading-relaxed mb-5">Sistematizacija sudskih presuda i pravna baza znanja. Pretražujte presedane, usporedite presude i gradite strategije slučajeva s AI-jem.</p>
-          <ul class="space-y-2 mb-6"><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#9B59B6;font-size:10px;">◆</span> Baza presuda i pretraga</li><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#9B59B6;font-size:10px;">◆</span> Unakrsno referenciranje sudske prakse</li><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#9B59B6;font-size:10px;">◆</span> Upiti na prirodnom jeziku</li><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#9B59B6;font-size:10px;">◆</span> Rezultati po jurisdikciji</li></ul>
-          <a href="#kontakt" style="display:inline-block;padding:10px 22px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#e2e8f0;border-radius:8px;text-decoration:none;font-weight:600;font-size:13px;font-family:'Rajdhani',sans-serif;letter-spacing:1px;text-transform:uppercase;">Zatraži demo →</a>
-        </div>
-        <div class="product-card morph rounded-2xl p-8">
-          <div class="product-bar morph"></div>
-          <img src="/images/logo-llm-morph.png" alt="LLM Morph" style="width:60px;height:60px;border-radius:12px;object-fit:cover;margin-bottom:16px;">
-          <div class="flex items-start justify-between mb-4"><div><h3 style="font-family:'Rajdhani',sans-serif;font-size:26px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#e2e8f0;margin:0;">LLM Morph</h3><span style="display:inline-block;margin-top:4px;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:rgba(79,142,247,0.2);color:#7cb8f7;">Prompt Branding</span></div><span style="padding:4px 10px;border-radius:10px;font-size:11px;font-weight:600;background:rgba(34,197,94,0.15);color:#4ade80;">Live</span></div>
-          <p class="text-white/60 text-sm leading-relaxed mb-5">Vaša web stranica je nevidljiva za AI pretragu. LLM Morph restrukturira vaš sadržaj tako da ChatGPT, Claude i Gemini citiraju VAS.</p>
-          <ul class="space-y-2 mb-6"><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#4F8EF7;font-size:10px;">◆</span> GEO audit i restrukturiranje</li><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#4F8EF7;font-size:10px;">◆</span> Schema markup za AI parsere</li><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#4F8EF7;font-size:10px;">◆</span> Optimizacija citiranja u LLM-ovima</li><li class="text-sm text-white/40 flex items-center gap-2"><span style="color:#4F8EF7;font-size:10px;">◆</span> Analiza AI-vidljivosti konkurencije</li></ul>
-          <a href="#kontakt" style="display:inline-block;padding:10px 22px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#e2e8f0;border-radius:8px;text-decoration:none;font-weight:600;font-size:13px;font-family:'Rajdhani',sans-serif;letter-spacing:1px;text-transform:uppercase;">Zatraži demo →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Social Proof -->
-  <section class="py-24" style="background-color:#fafafa;">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-        <div class="text-center"><div class="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">20+</div><p class="text-sm text-muted-foreground">aktivnih klijenata</p></div>
-        <div class="text-center"><div class="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">10h+</div><p class="text-sm text-muted-foreground">uštede tjedno po klijentu</p></div>
-        <div class="text-center"><div class="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">90%</div><p class="text-sm text-muted-foreground">manje propuštenih termina</p></div>
-        <div class="text-center"><div class="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">3-7</div><p class="text-sm text-muted-foreground">dana do implementacije</p></div>
-      </div>
-      <div class="text-center mb-12"><h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Što kažu naši klijenti</h2></div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-card rounded-2xl p-8 border border-border shadow-card"><div class="flex gap-1 mb-4"><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><p class="text-sm mb-6 leading-relaxed">"Sustav rezervacija smanjio nam je nedolaske za 85%. AI bot odgovara klijentima čak i u 2 ujutro."</p><div><p class="font-semibold text-sm">Ana M.</p><p class="text-xs text-muted-foreground">Vlasnica frizerskog salona</p></div></div>
-        <div class="bg-card rounded-2xl p-8 border border-border shadow-card"><div class="flex gap-1 mb-4"><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><p class="text-sm mb-6 leading-relaxed">"Vrijeme izrade ponuda deseterostruko se skratilo. Odjel od 15 ljudi funkcionira kao tim od 25."</p><div><p class="font-semibold text-sm">Marko T.</p><p class="text-xs text-muted-foreground">Direktor građevinske firme</p></div></div>
-        <div class="bg-card rounded-2xl p-8 border border-border shadow-card"><div class="flex gap-1 mb-4"><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><p class="text-sm mb-6 leading-relaxed">"Automatsko prikupljanje dokumenata je game-changer. Klijenti šalju fakture na WhatsApp, sustav ih sam kategorizira."</p><div><p class="font-semibold text-sm">Ivana K.</p><p class="text-xs text-muted-foreground">Računovođa</p></div></div>
-      </div>
-    </div>
-  </section>
+      const grids = {
+        feed:     document.getElementById('feed-grid'),
+        breaking: document.getElementById('breaking-grid'),
+        biseri:   document.getElementById('biseri-grid'),
+        ispod:    document.getElementById('ispod-grid'),
+        skn:      document.getElementById('skn-grid'),
+        mv:       document.getElementById('mv-grid'),
+      };
 
-  <!-- ROI Calculator -->
-  <section id="roi" class="py-24 bg-gradient-hero overflow-hidden relative">
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-10 blur-[120px]" style="background:#6366f1;"></div>
-    <div class="container mx-auto px-4 relative">
-      <div class="text-center mb-14"><h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Koliko možete uštedjeti?</h2><p class="text-white/50 max-w-lg mx-auto">Unesite podatke o vašem timu i saznajte koliko vremena i novca možete uštedjeti.</p></div>
-      <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 space-y-8">
-          <div><div class="flex items-center justify-between mb-3"><span class="text-sm font-medium text-white/80">👥 Broj zaposlenika</span><span class="font-display text-xl font-bold text-accent" id="employees-val">5</span></div><input type="range" min="1" max="50" value="5" class="w-full h-2 rounded-full appearance-none cursor-pointer" id="employees" style="background:linear-gradient(to right,#6366f1 0%,#a78bfa 10%,#1e293b 10%);"><div class="flex justify-between text-xs text-white/30 mt-1"><span>1</span><span>50</span></div></div>
-          <div><div class="flex items-center justify-between mb-3"><span class="text-sm font-medium text-white/80">Sati dnevno na repetitivne zadatke</span><span class="font-display text-xl font-bold text-accent" id="hours-val">2.0h</span></div><input type="range" min="1" max="8" step="0.5" value="2" class="w-full h-2 rounded-full appearance-none cursor-pointer" id="hours" style="background:linear-gradient(to right,#6366f1 0%,#a78bfa 14.29%,#1e293b 14.29%);"><div class="flex justify-between text-xs text-white/30 mt-1"><span>1h</span><span>8h</span></div></div>
-          <div><div class="flex items-center justify-between mb-3"><span class="text-sm font-medium text-white/80">Prosječna satnica</span><span class="font-display text-xl font-bold text-accent" id="rate-val">15€/h</span></div><input type="range" min="5" max="50" value="15" class="w-full h-2 rounded-full appearance-none cursor-pointer" id="rate" style="background:linear-gradient(to right,#6366f1 0%,#a78bfa 22.22%,#1e293b 22.22%);"><div class="flex justify-between text-xs text-white/30 mt-1"><span>5€</span><span>50€</span></div></div>
-        </div>
-        <div class="space-y-4">
-          <div class="rounded-xl p-5 border bg-white/5 border-white/10"><p class="text-xs font-medium mb-1 text-white/50">Ušteđeno sati tjedno</p><p class="font-display text-2xl font-bold text-accent" id="weekly-hours">7.0h</p><p class="text-xs mt-1 text-white/40" id="weekly-desc">5 zaposlenika × 2h × 70% automatizacije</p></div>
-          <div class="rounded-xl p-5 border bg-white/5 border-white/10"><p class="text-xs font-medium mb-1 text-white/50">Ušteđeno sati mjesečno</p><p class="font-display text-2xl font-bold text-accent" id="monthly-hours">28h</p></div>
-          <div class="rounded-xl p-5 border bg-gradient-primary border-transparent shadow-glow"><p class="text-xs font-medium mb-1 text-white/70">Ušteda mjesečno</p><p class="font-display text-2xl font-bold text-white" id="monthly-savings">420€</p></div>
-          <div class="rounded-xl p-5 border bg-gradient-primary border-transparent shadow-glow"><p class="text-xs font-medium mb-1 text-white/70">Ušteda godišnje</p><p class="font-display text-2xl font-bold text-white" id="yearly-savings">5.040€</p></div>
-          <a href="#kontakt" class="mt-4 w-full bg-gradient-primary text-white rounded-xl px-6 py-4 font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-glow">Zakaži analizu i počni štedjeti</a>
-        </div>
-      </div>
-    </div>
-  </section>
+      const counts = { breaking: 0, biseri: 0, ispod: 0, skn: 0, mv: 0 };
 
-  <!-- Pricing -->
-  <section id="cijene" class="py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16"><h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Jednostavne cijene, jasna vrijednost</h2><p class="text-muted-foreground max-w-lg mx-auto">Bez skrivenih troškova. Otkazivanje bilo kada.</p></div>
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div class="relative rounded-2xl p-8 border border-border bg-card shadow-card"><h3 class="font-display text-2xl font-bold mb-1">Analiza</h3><div class="flex items-baseline gap-1 mb-6"><span class="text-4xl font-display font-bold">0€</span><span class="text-sm text-muted-foreground">jednokratno</span></div><ul class="space-y-3 mb-6"><li class="flex items-start gap-2 text-sm"><svg class="w-4 h-4 mt-0.5 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>30min video call</li><li class="flex items-start gap-2 text-sm"><svg class="w-4 h-4 mt-0.5 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Identificiramo 3 problema</li><li class="flex items-start gap-2 text-sm"><svg class="w-4 h-4 mt-0.5 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Bez obaveza</li></ul><a href="#kontakt" class="w-full inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold bg-gradient-primary text-white hover:opacity-90">Zakaži besplatno</a></div>
-        <div class="relative rounded-2xl p-8 border-2 border-primary bg-gradient-primary text-white shadow-glow scale-[1.02]"><div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold px-4 py-1 rounded-full">Najpopularnije</div><h3 class="font-display text-2xl font-bold mb-1">Starter</h3><div class="flex items-baseline gap-1 mb-6"><span class="text-4xl font-display font-bold">50€</span><span class="text-sm text-white/60">/mjesec</span></div><ul class="space-y-3 mb-6"><li class="flex items-start gap-2 text-sm text-white/90"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1 automatizacija</li><li class="flex items-start gap-2 text-sm text-white/90"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>WhatsApp bot ili booking</li><li class="flex items-start gap-2 text-sm text-white/90"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Email podrška</li><li class="flex items-start gap-2 text-sm text-white/90"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Mjesečna optimizacija</li></ul><a href="#kontakt" class="w-full inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold bg-white text-foreground hover:bg-white/90">Započni odmah</a></div>
-        <div class="relative rounded-2xl p-8 border border-border bg-card shadow-card"><h3 class="font-display text-2xl font-bold mb-1">Pro</h3><div class="flex items-baseline gap-1 mb-6"><span class="text-4xl font-display font-bold">150€</span><span class="text-sm text-muted-foreground">/mjesec</span></div><ul class="space-y-3 mb-6"><li class="flex items-start gap-2 text-sm"><svg class="w-4 h-4 mt-0.5 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>3-5 automatizacija</li><li class="flex items-start gap-2 text-sm"><svg class="w-4 h-4 mt-0.5 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom rješenja</li><li class="flex items-start gap-2 text-sm"><svg class="w-4 h-4 mt-0.5 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority podrška</li><li class="flex items-start gap-2 text-sm"><svg class="w-4 h-4 mt-0.5 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Mjesečni reporti</li></ul><a href="#kontakt" class="w-full inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold bg-gradient-primary text-white hover:opacity-90">Kontaktiraj nas</a></div>
-      </div>
-    </div>
-  </section>
+      articles.forEach(article => {
+        grids.feed.appendChild(buildCard(article));
 
-  <!-- FAQ -->
-  <section id="faq" class="py-24" style="background-color:#fafafa;">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <div class="text-center mb-12"><h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Najčešća pitanja</h2></div>
-      <div class="space-y-3">
-        <details class="bg-card border border-border rounded-xl px-6 group"><summary class="text-left font-semibold py-5 cursor-pointer list-none flex items-center justify-between">Treba li mi IT tim?<svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><p class="text-muted-foreground pb-5">Ne! Mi postavljamo sve za vas i obučavamo vaš tim.</p></details>
-        <details class="bg-card border border-border rounded-xl px-6 group"><summary class="text-left font-semibold py-5 cursor-pointer list-none flex items-center justify-between">Koliko to košta?<svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><p class="text-muted-foreground pb-5">Besplatna analiza je potpuno besplatna. Starter 50€/mj, Pro 150€/mj. Prilagođavamo rješenje vašem budžetu.</p></details>
-        <details class="bg-card border border-border rounded-xl px-6 group"><summary class="text-left font-semibold py-5 cursor-pointer list-none flex items-center justify-between">Što ako ne razumijem tehnologiju?<svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><p class="text-muted-foreground pb-5">Naš posao je da vam sve pojednostavimo. Objasnit ćemo sve na jednostavnom jeziku.</p></details>
-        <details class="bg-card border border-border rounded-xl px-6 group"><summary class="text-left font-semibold py-5 cursor-pointer list-none flex items-center justify-between">Koliko traje implementacija?<svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><p class="text-muted-foreground pb-5">Većina rješenja je funkcionalna unutar 3-7 dana.</p></details>
-        <details class="bg-card border border-border rounded-xl px-6 group"><summary class="text-left font-semibold py-5 cursor-pointer list-none flex items-center justify-between">Što ako mi se ne sviđa?<svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><p class="text-muted-foreground pb-5">Otkazivanje je moguće bilo kada. Nema ugovora na duži rok.</p></details>
-      </div>
-    </div>
-  </section>
+        if (article.category === 'breaking-news') {
+          grids.breaking.appendChild(buildCard(article)); counts.breaking++;
+        } else if (article.category === 'skriveni-biseri') {
+          grids.biseri.appendChild(buildCard(article)); counts.biseri++;
+        } else if (article.category === 'ispod-10-eura') {
+          grids.ispod.appendChild(buildCard(article)); counts.ispod++;
+        } else if (article.category === 'samo-kod-nas') {
+          grids.skn.appendChild(buildCard(article)); counts.skn++;
+        } else if (article.category === 'millennial-view') {
+          grids.mv.appendChild(buildCard(article)); counts.mv++;
+        }
+      });
 
-  <!-- Contact -->
-  <section id="kontakt" class="py-24 bg-white">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <div class="text-center mb-12"><h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Zakaži besplatnu analizu</h2><p class="text-muted-foreground">Kontaktirajte nas putem forme, WhatsAppa, telefona ili emaila</p></div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <a href="https://wa.me/385923200238" target="_blank" class="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-primary/50"><div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div><div><p class="font-semibold text-sm">WhatsApp</p><p class="text-xs text-muted-foreground">Pišite nam</p></div></a>
-        <a href="tel:+385919779716" class="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-primary/50"><div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div><div><p class="font-semibold text-sm">Telefon</p><p class="text-xs text-muted-foreground">091 977 9716</p></div></a>
-        <a href="mailto:vssdigital-online@gmail.com" class="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-primary/50"><div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><p class="font-semibold text-sm">Email</p><p class="text-xs text-muted-foreground">vssdigital-online@gmail.com</p></div></a>
-        <a href="https://calendar.app.google/JJmAjd6dD198PBe8A" target="_blank" class="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-primary/50"><div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div><p class="font-semibold text-sm">Zakaži poziv</p><p class="text-xs text-muted-foreground">Google Calendar</p></div></a>
-      </div>
-      <form class="bg-card rounded-2xl p-8 border border-border shadow-card space-y-5" onsubmit="handleContactSubmit(event)">
-        <div class="grid sm:grid-cols-2 gap-5"><div><label class="text-sm font-medium mb-1.5 block">Ime i prezime</label><input type="text" name="name" required class="w-full bg-muted rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary/30 border border-border" placeholder="Vaše ime"></div><div><label class="text-sm font-medium mb-1.5 block">Email</label><input type="email" name="email" required class="w-full bg-muted rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary/30 border border-border" placeholder="vas@email.com"></div></div>
-        <div class="grid sm:grid-cols-2 gap-5"><div><label class="text-sm font-medium mb-1.5 block">Telefon</label><input type="tel" name="phone" class="w-full bg-muted rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary/30 border border-border" placeholder="+385..."></div><div><label class="text-sm font-medium mb-1.5 block">Vrsta biznisa</label><select name="business" required class="w-full bg-muted rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary/30 border border-border"><option value="">Odaberite</option><option value="persona-lex">Persona Lex (Legal AI)</option><option value="llm-morph">LLM Morph (Prompt Branding)</option><option value="frizerski-salon">Frizerski salon</option><option value="restoran">Restoran</option><option value="knjigovodstvo">Knjigovodstvo</option><option value="pravnik">Odvjetnički ured</option><option value="gradevina">Građevinska firma</option><option value="ostalo">Ostalo</option></select></div></div>
-        <div><label class="text-sm font-medium mb-1.5 block">Vaša poruka (opcionalno)</label><textarea name="message" rows="3" class="w-full bg-muted rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary/30 border border-border resize-none" placeholder="Opišite vaše izazove..."></textarea></div>
-        <div class="flex flex-col sm:flex-row gap-3"><button type="submit" class="flex-1 bg-gradient-primary text-white rounded-xl px-6 py-4 font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-glow">Pošalji upit</button><a href="https://wa.me/385923200238" target="_blank" class="flex-1 bg-muted text-foreground rounded-xl px-6 py-4 font-semibold hover:bg-muted/80 flex items-center justify-center gap-2 border border-border">WhatsApp</a></div>
-      </form>
-    </div>
-  </section>
+      document.getElementById('feed-count').textContent =
+        articles.length === 1 ? '1 objava' : `${articles.length} objave`;
 
-  <!-- Footer -->
-  <footer class="bg-foreground text-white/70 py-12">
-    <div class="container mx-auto px-4"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex items-center gap-3"><img src="/images/logo-vss.png" alt="VSS Digital" style="height:38px;width:38px;border-radius:8px;object-fit:cover;"><p class="text-sm">AI automatizacija za vaš biznis</p></div><div class="flex items-center gap-6 text-sm"><a href="#rjesenja" class="hover:text-white">Rješenja</a><a href="#industrije" class="hover:text-white">Industrije</a><a href="#sustavi" class="hover:text-white">Sustavi</a><a href="#cijene" class="hover:text-white">Cijene</a><a href="#kontakt" class="hover:text-white">Kontakt</a></div><p class="text-xs">© 2026 VSS Digital. Sva prava pridržana.</p></div></div>
-  </footer>
+      if (counts.breaking === 0) grids.breaking.appendChild(emptyState('Prva breaking priča dolazi uskoro.'));
+      if (counts.biseri === 0)   grids.biseri.appendChild(emptyState('Skriveni biseri na putu.'));
+      if (counts.ispod === 0)    grids.ispod.appendChild(emptyState('Jeftino i dobro — uskoro.'));
+      if (counts.skn === 0)      grids.skn.appendChild(emptyState('Ekskluzivne priče dolaze uskoro.'));
+      if (counts.mv === 0)       grids.mv.appendChild(emptyState('Prva kolumna u pripremi.'));
+    })
+    .catch(() => {
+      document.getElementById('feed-grid').innerHTML =
+        '<div class="empty-state"><div class="empty-icon"><img src="RBlogo.png" alt="RB"></div><h3>Feed se učitava.</h3><p>Pokrenite lokalni server: python3 -m http.server 8000</p></div>';
+    });
 
-  <script>
-    const employeesInput=document.getElementById('employees'),hoursInput=document.getElementById('hours'),rateInput=document.getElementById('rate');
-    function updateCalculator(){const e=parseInt(employeesInput.value),h=parseFloat(hoursInput.value),r=parseInt(rateInput.value);document.getElementById('employees-val').textContent=e;document.getElementById('hours-val').textContent=h.toFixed(1)+'h';document.getElementById('rate-val').textContent=r+'€/h';const w=e*h*0.7,m=w*4,ms=Math.round(m*r),y=ms*12;document.getElementById('weekly-hours').textContent=w.toFixed(1)+'h';document.getElementById('weekly-desc').textContent=e+' zaposlenika × '+h+'h × 70% automatizacije';document.getElementById('monthly-hours').textContent=Math.round(m)+'h';document.getElementById('monthly-savings').textContent=ms.toLocaleString('hr-HR')+'€';document.getElementById('yearly-savings').textContent=y.toLocaleString('hr-HR')+'€';const ep=((e-1)/49)*100,hp=((h-1)/7)*100,rp=((r-5)/45)*100;employeesInput.style.background='linear-gradient(to right,#6366f1 0%,#a78bfa '+ep+'%,#1e293b '+ep+'%)';hoursInput.style.background='linear-gradient(to right,#6366f1 0%,#a78bfa '+hp+'%,#1e293b '+hp+'%)';rateInput.style.background='linear-gradient(to right,#6366f1 0%,#a78bfa '+rp+'%,#1e293b '+rp+'%)';}
-    employeesInput.addEventListener('input',updateCalculator);hoursInput.addEventListener('input',updateCalculator);rateInput.addEventListener('input',updateCalculator);updateCalculator();
-    function handleContactSubmit(e){e.preventDefault();const f=e.target,d=new FormData(f),b=f.querySelector('button[type="submit"]');b.textContent='Šaljem...';b.disabled=true;fetch('https://script.google.com/macros/s/AKfycbwCIBiKHQih4LQAiHH22V6hjWfTwhEwA1xNFeiUUY8vECNz0MCq-EQMuVXTDDtkiI8h2g/exec',{method:'POST',body:d}).then(()=>{b.textContent='✓ Poslano!';f.reset();setTimeout(()=>{b.textContent='Pošalji upit';b.disabled=false;},3000);}).catch(()=>{b.textContent='Pošalji upit';b.disabled=false;alert('Hvala! Javit ćemo vam se u 24h.');f.reset();});}
-  </script>
-  <link rel="stylesheet" href="/css/chatbot.css"><script src="/js/chatbot-widget.js" defer></script>
-  <button id="chat-button" aria-label="Otvori chat"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.477 3 2 6.925 2 11.75c0 2.094.75 4.03 2 5.563V21l3.75-2.063A10.56 10.56 0 0012 20.5c5.523 0 10-3.925 10-8.75S17.523 3 12 3z"/></svg></button>
-  <div id="chat-window"><div id="chat-header"><div class="chat-avatar"><svg viewBox="0 0 24 24"><path d="M12 3C6.477 3 2 6.925 2 11.75c0 2.094.75 4.03 2 5.563V21l3.75-2.063A10.56 10.56 0 0012 20.5c5.523 0 10-3.925 10-8.75S17.523 3 12 3z"/></svg></div><div class="chat-info"><h4>VSS Digital Asistent</h4><span>Online</span></div><button id="chat-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div><div id="chat-messages"></div><div id="chat-input-area"><input id="chat-input" type="text" placeholder="Napišite poruku..." autocomplete="off"><button id="send-btn"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 19-4-8-8-4 19-7z"/></svg></button></div><div class="chat-powered">Powered by <a href="https://vssdigital.online">VSS Digital</a></div></div>
-  <a id="wa-float" href="https://wa.me/385919779716?text=Pozdrav!%20Zanima%20me%20automatizacija%20poslovanja." target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.849L.057 23.617a.75.75 0 00.921.921l5.768-1.476A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 01-4.953-1.355l-.355-.211-3.676.941.957-3.565-.232-.366A9.712 9.712 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg></a>
-  <style>#wa-float{position:fixed;bottom:96px;right:24px;z-index:9998;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s}#wa-float:hover{transform:scale(1.08)}#chat-button{bottom:24px !important}</style>
+  document.querySelectorAll('.mobile-nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.mobile-nav-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
