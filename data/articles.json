@@ -1,15 +1,15 @@
 [
   {
-    "id": "mv-pivarstvo-inventory-ai",
-    "title": "Pivarstvo i inventory software: Excel više nije dovoljan",
-    "excerpt": "Craft beer scena u Hrvatskoj je aktivna i ozbiljna. Ali iza kulisa, većina malih pivovara i dalje vodi inventar u Excelu. Kad krene rasti — počinje borba.",
-    "category": "millennial-view",
-    "categoryLabel": "Millennial View",
-    "author": "Vlado Stipan",
-    "date": "2026-04-30",
-    "dateLabel": "30. travnja 2026.",
-    "image": "images/craft1.png",
-    "url": "millennial-view/mv-pivarstvo-inventory-ai.html"
+    "id": "zadarski-visoki-turizam",
+    "title": "Zadarski visoki turizam",
+    "excerpt": "Kinez je Dalmatinac, kafić se zove Doma, a tri koraka niže Leo u Pjatu servira orzot sa sipama koji jedva stane uz savajaču od jabuka. Ovako se jede Zadar kad te lokaliziraju pravi ljudi.",
+    "category": "samo-kod-nas",
+    "categoryLabel": "Samo kod nas",
+    "author": "Rene Bakalović",
+    "date": "2026-05-30",
+    "dateLabel": "30. svibnja 2026.",
+    "image": "images/zadar1.png",
+    "url": "samo-kod-nas/zadarski-visoki-turizam.html"
   },
   {
     "id": "akcija-kokos",
@@ -22,6 +22,18 @@
     "dateLabel": "1. svibnja 2026.",
     "image": "images/natpisi.png",
     "url": "samo-kod-nas/akcija-kokos.html"
+  },
+  {
+    "id": "mv-pivarstvo-inventory-ai",
+    "title": "Pivarstvo i inventory software: Excel više nije dovoljan",
+    "excerpt": "Craft beer scena u Hrvatskoj je aktivna i ozbiljna. Ali iza kulisa, većina malih pivovara i dalje vodi inventar u Excelu. Kad krene rasti — počinje borba.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-04-30",
+    "dateLabel": "30. travnja 2026.",
+    "image": "images/craft1.png",
+    "url": "millennial-view/mv-pivarstvo-inventory-ai.html"
   },
   {
     "id": "mv-sustav-vs-improvizacija",
