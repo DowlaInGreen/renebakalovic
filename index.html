@@ -17,6 +17,7 @@
     --mid-grey: #2C2C2C;
     --text-muted: #888;
     --border: rgba(255,255,255,0.08);
+    --blue: #1E6FD9;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 100%; overflow-x: hidden; }
@@ -68,6 +69,11 @@
   .card-author { font-size: 11px; color: var(--text-muted); }
   .card-date { font-size: 11px; color: var(--text-muted); }
   .card-read { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-top: 12px; }
+  .card.mv .card-image { border-bottom: 2px solid var(--blue); }
+  .card.mv .card-image-placeholder { border-bottom: 2px solid var(--blue); }
+  .card.mv .card-category { color: var(--blue); }
+  .card.mv .card-author { color: var(--blue); }
+  .card.mv .card-read { color: var(--blue); }
 
   /* SAMO KOD NAS — poseban styling */
   .skn-band { background: var(--mid-grey); border-top: 3px solid var(--red); border-bottom: 1px solid var(--border); padding: 40px 16px 0; margin-top: 8px; }
@@ -332,7 +338,7 @@
 <script>
   function buildCard(article) {
     const card = document.createElement('a');
-    card.className = 'card';
+    card.className = article.category === 'millennial-view' ? 'card mv' : 'card';
     card.href = article.url;
     const imageHTML = article.image
       ? `<img class="card-image" src="${article.image}" alt="${article.title}" loading="lazy">`
