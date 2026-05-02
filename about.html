@@ -101,6 +101,13 @@
     .author-photo { width: 100%; aspect-ratio: 3/2; object-fit: cover; margin-bottom: 32px; background: #2C2C2C; display: block; filter: grayscale(20%); }
     .author-photo-placeholder { width: 100%; aspect-ratio: 3/2; background: var(--mid-grey); border: 1px dashed rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 32px; }
     .author-photo-placeholder span { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+
+    .author-card:nth-child(2)::before { background: #1E6FD9; }
+    .author-card:nth-child(2) .author-label { color: #1E6FD9; }
+    .author-card:nth-child(2) .author-credits li::before { color: #1E6FD9; }
+    .author-card:nth-child(2) .author-social a:hover { border-color: #1E6FD9; color: #1E6FD9; }
+    .vlado-num { color: rgba(30,111,217,0.1) !important; }
+    .vlado-placeholder { border-color: rgba(30,111,217,0.2) !important; }
     /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 32px 16px; margin-top: 80px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
@@ -143,7 +150,7 @@
 
     <!-- RENE -->
     <div class="author-card">
-      <img src="images/rene.png" class="author-photo" alt="Rene Bakalović">
+      <div class="author-photo-placeholder"><span>rene.png</span></div>
       <div class="author-number">01</div>
       <span class="author-label">Osnivač & autor</span>
       <h2 class="author-name">Rene Bakalović</h2>
@@ -172,8 +179,8 @@
 
     <!-- VLADO -->
     <div class="author-card">
-      <img src="images/vlado.png" class="author-photo" alt="Vlado Stipan">
-      <div class="author-number">02</div>
+      <div class="author-photo-placeholder vlado-placeholder"><span>vlado.png</span></div>
+      <div class="author-number vlado-num">02</div>
       <span class="author-label">Millennial View · Kolumnist</span>
       <h2 class="author-name">Vlado Stipan</h2>
       <div class="author-title">F&B veteran · AI specialist · Konzultant</div>
