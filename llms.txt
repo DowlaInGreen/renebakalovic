@@ -1,0 +1,32 @@
+# Rene Bakalović — Food. Drink. City.
+
+> Urbano food i lifestyle novinarstvo iz Zagreba. Bez filtera, bez PR-a.
+
+Renebakalovic.online je editorial portal s dva autora:
+- Rene Bakalović piše o restoranima, skrivenim bistroima, street foodu i gradskim kulinarskim trendovima
+- Vlado Stipan vodi Millennial View — kolumnu o F&B industriji iz perspektive operatera i AI specijalista
+
+Sadržaj je na hrvatskom jeziku, ijekavica. Fokus: Zagreb i hrvatska food scena.
+
+## Sekcije
+
+- Skriveni biseri: https://renebakalovic.online/skriveni-biseri/
+- Ispod 10€: https://renebakalovic.online/ispod-10-eura/
+- Samo kod nas: https://renebakalovic.online/samo-kod-nas/
+- Millennial View: https://renebakalovic.online/millennial-view/
+
+## Objavljeni članci
+
+- Čudo u škartocu: https://renebakalovic.online/ispod-10-eura/cudo-u-skartocu.html
+- Akcija Kokoš: https://renebakalovic.online/samo-kod-nas/akcija-kokos.html
+- Zadarski visoki turizam: https://renebakalovic.online/samo-kod-nas/zadarski-visoki-turizam.html
+- Pivarstvo i inventory software: https://renebakalovic.online/millennial-view/mv-pivarstvo-inventory-ai.html
+- Zašto su najbolji restorani oni koji najmanje improviziraju: https://renebakalovic.online/millennial-view/mv-sustav-vs-improvizacija.html
+- Rakovice za znalce i početnike: https://renebakalovic.online/skriveni-biseri/rakovice-za-znalce-i-pocetnike.html
+- Prava kombucha nema mane: https://renebakalovic.online/skriveni-biseri/prava-kombucha-nema-mane.html
+- Zamislite svijet gdje…: https://renebakalovic.online/millennial-view/mv-digitalni-asistent-restoran.html
+- Primjer automatizacije u restoranu — No-Show: https://renebakalovic.online/millennial-view/mv-no-show-automatizacija.html
+
+## Sitemap
+
+https://renebakalovic.online/sitemap.xml
