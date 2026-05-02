@@ -67,8 +67,8 @@ for article in articles:
         "width": 1200,
         "height": 630
       }},
-      "datePublished": "{article['date']}",
-      "dateModified": "{article['date']}",
+      "datePublished": "{article['date']}T00:00:00+02:00",
+      "dateModified": "{article['date']}T00:00:00+02:00",
       "author": {{
         "@type": "Person",
         "@id": "{author_id}",
