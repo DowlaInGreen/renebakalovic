@@ -12,6 +12,18 @@
     "url": "samo-kod-nas/zadarski-visoki-turizam.html"
   },
   {
+    "id": "cudo-u-skartocu",
+    "title": "Čudo u škartocu",
+    "excerpt": "Čak i u malom brodu gdje je kuhinja veličine četvornog metra moguće je pripraviti vrhunsku gastronomsku paradu uz minimalne troškove. Oslić, krumpir, tikvica i papir za pečenje.",
+    "category": "ispod-10-eura",
+    "categoryLabel": "Ispod 10€",
+    "author": "Rene Bakalović",
+    "date": "2026-05-01",
+    "dateLabel": "1. svibnja 2026.",
+    "image": "images/skartoc.png",
+    "url": "ispod-10-eura/cudo-u-skartocu.html"
+  },
+  {
     "id": "akcija-kokos",
     "title": "Akcija Kokoš",
     "excerpt": "Akcija Kokoš nasmije me svaki put na Trešnjevačkom placu. Skupljam bizarne i duhovite poruke s tržnica — i pozivam vas da šaljete svoje ulovke.",
