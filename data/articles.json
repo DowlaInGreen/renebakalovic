@@ -1,5 +1,17 @@
 [
   {
+    "id": "taman",
+    "title": "Taman",
+    "excerpt": "Tek što smo se na Pagu spustili do mora u Mandru prvi usidreni brod me oduševio skromnošću. Kao da objašnjava jednom riječju kapetanovu životnu filozofiju. Za užitak u moru nije neophodna jahturina. Mali brodić za velike gušte. Taman.",
+    "category": "skriveni-biseri",
+    "categoryLabel": "Skriveni biseri",
+    "author": "Rene Bakalović",
+    "date": "2026-05-03",
+    "dateLabel": "3. svibnja 2026.",
+    "image": "images/kornati1.png",
+    "url": "skriveni-biseri/taman.html"
+  },
+  {
     "id": "zadarski-visoki-turizam",
     "title": "Zadarski visoki turizam",
     "excerpt": "Kinez je Dalmatinac, kafić se zove Doma, a tri koraka niže Leo u Pjatu servira orzot sa sipama koji jedva stane uz savajaču od jabuka. Ovako se jede Zadar kad te lokaliziraju pravi ljudi.",
