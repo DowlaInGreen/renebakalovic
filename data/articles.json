@@ -1,5 +1,17 @@
 [
   {
+    "id": "mv-vino-klima-ai",
+    "title": "AI Vinobran",
+    "excerpt": "Vinari Beringer i Matua ne čekaju da se dogodi najgore. Koriste AI koji modelira klimatske scenarije i predviđa prinose berbe. Potrošnja vode pala za 20 posto. Kvaliteta grožđa raste unatoč uvjetima.",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-05-03",
+    "dateLabel": "3. svibnja 2026.",
+    "image": "images/mv-vino-klima-ai.png",
+    "url": "millennial-view/mv-vino-klima-ai.html"
+  },
+  {
     "id": "mv-carlsberg-fingerprint",
     "title": "Carlsberg snima otisak prsta piva",
     "excerpt": "Carlsberg je razvio Beer Fingerprinting. Svako pivo ima kemijski otisak — kombinaciju spojeva, aroma i procesa koja ga čini jedinstvenim. AI predviđa uspjeh novog okusa prije nego što počne proizvodnja.",
