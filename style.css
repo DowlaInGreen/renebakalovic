@@ -12,9 +12,9 @@
   --rule:           #C4BAA4;
   --rule-light:     #D8D0BC;
   --accent:         #E6392F;
-  --mv-blue:        #4A6FA5;
+  --mv-blue:        #1B3A5C;
   --mv-blue-light:  #EBF0F8;
-  --mv-blue-dark:   #2E4E7A;
+  --mv-blue-dark:   #0F2540;
 
   --font-blackletter: 'UnifrakturMaguntia', serif;
   --font-headline:    'IM Fell English', Georgia, serif;
@@ -66,10 +66,12 @@ body {
   border-bottom: 1px solid var(--rule);
 }
 .masthead-title-wrap img.logo-full {
-  max-height: 70px;
+  max-height: 80px;
   width: auto;
-  filter: brightness(0) saturate(100%);
+  display: block;
+  margin: 0 auto;
 }
+.masthead-title-wrap a { display: block; line-height: 0; }
 .masthead-logo-text {
   font-family: var(--font-blackletter);
   font-size: clamp(28px, 5vw, 54px);
@@ -123,7 +125,7 @@ body {
   transition: background 0.15s;
 }
 .site-nav a:hover { background: var(--paper-dark); }
-.site-nav .nav-mv a { color: #ffffff; background: #4A6FA5; padding: 8px 16px; }
+.site-nav .nav-mv a { color: #ffffff; background: #1B3A5C; padding: 8px 16px; }
 .site-nav .nav-breaking a::before { content: '● '; color: var(--accent); font-size: 8px; vertical-align: middle; }
 
 /* ── LAYOUT ─────────────────────────────────────────────── */
@@ -582,6 +584,7 @@ main {
 
 .article-meta {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
   margin-bottom: 1.5rem;
@@ -805,7 +808,7 @@ body.mv-page .hero { display: flex; flex-direction: column; align-items: center;
 }
 
 /* ── MILLENNIAL VIEW ARTICLE PAGES (dark blue treatment) ── */
-body.mv-page { background: #2E4E7A; color: #ffffff; }
+body.mv-page { background: #0F2540; color: #ffffff; }
 body.mv-page .article-body { color: #ffffff; }
 body.mv-page .article-body p { color: #ffffff; }
 body.mv-page .article-title,
@@ -818,7 +821,7 @@ body.mv-page .meta-date { color: #cbd5e8; }
 body.mv-page .author-chip span { color: #cbd5e8; }
 body.mv-page .article-byline { color: #cbd5e8; font-size: 12px; letter-spacing: 2px; margin-bottom: 1.5rem; font-family: var(--font-ui); }
 body.mv-page .article-body p:first-of-type::first-letter { color: #ffffff; }
-body.mv-page .article-category { background: #ffffff; color: #2E4E7A; }
+body.mv-page .article-category { background: #ffffff; color: #0F2540; }
 body.mv-page .category-label { background: transparent; color: #ffffff; border-color: rgba(255,255,255,0.6); }
 body.mv-page hr,
 body.mv-page .article-divider { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.4); }
