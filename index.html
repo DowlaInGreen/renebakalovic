@@ -58,7 +58,7 @@
     <span>renebakalovic.online</span>
   </div>
   <div class="masthead-title-wrap">
-    <img src="logo-full.png" class="logo-full" alt="Rene Bakalović — Food. Drink. City.">
+    <img src="images/logo-masthead.png" class="logo-full" alt="Rene Bakalović — Food. Drink. City.">
     <div class="masthead-tagline">— online magazin —</div>
   </div>
   <div class="masthead-rules"></div>
@@ -209,9 +209,6 @@
     const imageHTML = article.image
       ? `<img class="card-image" src="${article.image}" alt="${article.title}" loading="lazy">`
       : `<div class="card-image-placeholder"><img src="RBlogo.png" alt="RB"></div>`;
-    const authorChip = article.author === 'Vlado Stipan'
-      ? `<div class="author-chip">F&amp;B veteran &amp; AI specialist</div>`
-      : '';
     card.innerHTML = `
       ${imageHTML}
       <div class="card-body">
@@ -222,7 +219,6 @@
           <span class="card-author">${article.author}</span>
           <span class="card-date">${article.dateLabel}</span>
         </div>
-        ${authorChip}
         <div class="card-read">Čitaj →</div>
       </div>
     `;

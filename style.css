@@ -104,11 +104,12 @@ body {
   padding: 0 var(--gutter);
   list-style: none;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0;
 }
 .site-nav li { border-right: 1px solid var(--rule); }
-.site-nav li:last-child { border-right: none; margin-left: auto; }
+.site-nav li:last-child { border-right: none; }
 .site-nav a {
   display: block;
   padding: 8px 16px;
@@ -122,7 +123,7 @@ body {
   transition: background 0.15s;
 }
 .site-nav a:hover { background: var(--paper-dark); }
-.site-nav .nav-mv a { color: var(--mv-blue-dark); border-left: 3px solid var(--mv-blue); }
+.site-nav .nav-mv a { color: #ffffff; background: #4A6FA5; padding: 8px 16px; }
 .site-nav .nav-breaking a::before { content: '● '; color: var(--accent); font-size: 8px; vertical-align: middle; }
 
 /* ── LAYOUT ─────────────────────────────────────────────── */
@@ -794,3 +795,39 @@ main {
   .footer-inner { grid-template-columns: 1fr; }
   .site-nav ul { flex-wrap: wrap; }
 }
+
+/* ── MILLENNIAL VIEW ARTICLE PAGES (dark blue treatment) ── */
+body.mv-page { background: #2E4E7A; color: #ffffff; }
+body.mv-page .article-body { color: #ffffff; }
+body.mv-page .article-body p { color: #ffffff; }
+body.mv-page .article-title,
+body.mv-page h1 { color: #ffffff; }
+body.mv-page .hero-title { color: #ffffff; }
+body.mv-page .article-meta,
+body.mv-page .article-date,
+body.mv-page .article-author,
+body.mv-page .meta-date { color: #cbd5e8; }
+body.mv-page .author-chip span { color: #cbd5e8; }
+body.mv-page .article-category { background: #ffffff; color: #2E4E7A; }
+body.mv-page .category-label { background: transparent; color: #ffffff; border-color: rgba(255,255,255,0.6); }
+body.mv-page hr,
+body.mv-page .article-divider { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.4); }
+body.mv-page .pull-quote { border-left-color: rgba(255,255,255,0.4); }
+body.mv-page .pull-quote p { color: #cbd5e8; }
+body.mv-page .article-source a { color: #93b4d8 !important; }
+body.mv-page .site-header { background: #1e3a5f; border-bottom-color: rgba(255,255,255,0.15); }
+body.mv-page .masthead-meta { border-bottom-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); }
+body.mv-page .masthead-tagline { color: rgba(255,255,255,0.5); }
+body.mv-page .site-nav { border-bottom-color: rgba(255,255,255,0.15); }
+body.mv-page .site-nav a { color: rgba(255,255,255,0.85); }
+body.mv-page .site-nav a:hover { background: rgba(255,255,255,0.08); }
+body.mv-page .site-nav .nav-mv a { color: #ffffff; background: rgba(255,255,255,0.2); }
+body.mv-page .site-nav li { border-right-color: rgba(255,255,255,0.15); }
+body.mv-page .site-footer { background: #1e3a5f; border-top-color: rgba(255,255,255,0.15); }
+body.mv-page .footer-logo { color: #ffffff; }
+body.mv-page .footer-brand p,
+body.mv-page .footer-col h4 { color: rgba(255,255,255,0.7); }
+body.mv-page .footer-col a { color: rgba(255,255,255,0.6); }
+body.mv-page .footer-col a:hover { color: #ffffff; }
+body.mv-page .footer-bottom { border-top-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }
+body.mv-page .masthead-rules { border-color: rgba(255,255,255,0.15); }
