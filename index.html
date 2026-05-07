@@ -7,7 +7,8 @@
 <meta name="description" content="Urbana hrana i lifestyle. Što jede grad — svaki dan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="RBlogo.png">
 <link rel="canonical" href="https://renebakalovic.online/">
 <meta property="og:type" content="website">
@@ -47,191 +48,41 @@
   ]
 }
 </script>
-<style>
-  :root {
-    --red: #E6392F;
-    --charcoal: #1A1A1A;
-    --off-white: #F5F0E8;
-    --mid-grey: #2C2C2C;
-    --text-muted: #888;
-    --border: rgba(255,255,255,0.08);
-    --blue: #1E6FD9;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 100%; overflow-x: hidden; }
-  body { background: var(--charcoal); color: var(--off-white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-
-  /* NAV */
-  nav.topnav { background: var(--charcoal); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; width: 100%; }
-  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-  .logo-rb { height: 36px; width: 36px; object-fit: contain; display: block; }
-  .logo-full { height: 28px; object-fit: contain; display: block; }
-  .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
-  .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; }
-  .nav-links a:hover, .nav-links a.active { color: var(--off-white); }
-  .nav-cta { background: var(--red) !important; color: #fff !important; padding: 8px 14px; }
-
-  /* HERO */
-  .hero { background: url("Rene_banner.png") center/cover no-repeat; position: relative; border-bottom: 3px solid var(--red); padding: 60px 16px 40px; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: rgba(26,26,26,0.88); z-index: 0; }
-  .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-  .hero-eyebrow { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 0.4em; color: var(--red); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
-  .hero-eyebrow::after { content: ''; flex: 0 0 32px; height: 1px; background: var(--red); opacity: 0.5; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(32px, 8vw, 72px); line-height: 1.05; color: var(--off-white); letter-spacing: -0.02em; margin-bottom: 16px; }
-  .hero-sub { font-size: 17px; color: #FFFFFF; font-weight: 400; line-height: 1.65; margin-bottom: 28px; max-width: 480px; }
-  .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn-primary { background: var(--red); color: #fff; padding: 12px 22px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; display: inline-block; }
-  .btn-ghost { color: var(--off-white); border: 1px solid rgba(245,240,232,0.25); padding: 11px 22px; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; display: inline-block; }
-
-  /* CONTENT */
-  .content { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-
-  .section-header { display: flex; align-items: baseline; justify-content: space-between; padding: 40px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 28px; gap: 12px; flex-wrap: wrap; }
-  .section-header h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(24px, 6vw, 38px); color: var(--off-white); letter-spacing: -0.02em; position: relative; }
-  .section-header h2::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 24px; height: 3px; background: var(--red); }
-  .section-meta { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
-
-  /* ARTICLE CARDS */
-  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px; }
-  .card { background: var(--mid-grey); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.15s ease; }
-  .card:hover { transform: translateY(-3px); }
-  .card-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-bottom: 2px solid var(--red); }
-  .card-image-placeholder { width: 100%; aspect-ratio: 16/9; background: #222; border-bottom: 2px solid var(--red); display: flex; align-items: center; justify-content: center; }
-  .card-image-placeholder img { width: 32px; height: 32px; object-fit: contain; opacity: 0.3; }
-  .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
-  .card-category { font-family: 'Bebas Neue', sans-serif; font-size: 10px; letter-spacing: 0.35em; color: var(--red); }
-  .card-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px; line-height: 1.25; color: var(--off-white); }
-  .card-excerpt { font-size: 13px; color: var(--text-muted); line-height: 1.6; flex: 1; }
-  .card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
-  .card-author { font-size: 11px; color: var(--text-muted); }
-  .card-date { font-size: 11px; color: var(--text-muted); }
-  .card-read { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-top: 12px; }
-  .card.mv .card-image { border-bottom: 2px solid var(--blue); }
-  .card.mv .card-image-placeholder { border-bottom: 2px solid var(--blue); }
-  .card.mv .card-category { color: var(--blue); }
-  .card.mv .card-author { color: var(--blue); }
-  .card.mv .card-read { color: var(--blue); }
-
-  /* SAMO KOD NAS — poseban styling */
-  .skn-band { background: var(--mid-grey); border-top: 3px solid var(--red); border-bottom: 1px solid var(--border); padding: 40px 16px 0; margin-top: 8px; }
-  .skn-band-inner { max-width: 1200px; margin: 0 auto; }
-  .skn-label { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: var(--red); margin-bottom: 8px; }
-  .skn-band h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(26px, 7vw, 44px); color: var(--off-white); letter-spacing: -0.02em; margin-bottom: 10px; position: relative; display: inline-block; }
-  .skn-band h2::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 24px; height: 3px; background: var(--red); }
-  .skn-band p { font-size: 13px; color: var(--text-muted); max-width: 520px; line-height: 1.6; margin-top: 16px; margin-bottom: 28px; }
-
-  /* EMPTY STATE */
-  .empty-state { padding: 56px 16px; text-align: center; margin-bottom: 48px; border: 1px dashed rgba(255,255,255,0.08); }
-  .empty-icon { width: 44px; height: 44px; border: 1.5px solid var(--red); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
-  .empty-icon img { width: 28px; height: 28px; object-fit: contain; }
-  .empty-state h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--off-white); margin-bottom: 8px; }
-  .empty-state p { font-size: 13px; color: var(--text-muted); max-width: 280px; margin: 0 auto; line-height: 1.6; }
-
-  /* MILLENNIAL VIEW */
-  .mv-band { background: url("mv-banner.png") center/cover no-repeat; position: relative; padding: 40px 16px 32px; margin-top: 8px; }
-  .mv-band::before { content: ""; position: absolute; inset: 0; background: rgba(10,22,40,0.75); z-index: 0; }
-  .mv-band-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-  .mv-label { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
-  .mv-band h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(26px, 7vw, 44px); color: #fff; letter-spacing: -0.02em; margin-bottom: 10px; }
-  .mv-band p { font-size: 13px; color: rgba(255,255,255,0.75); max-width: 520px; line-height: 1.6; }
-  .author-chip { display: inline-flex; align-items: center; gap: 8px; background: rgba(230,57,47,0.1); border: 1px solid rgba(230,57,47,0.25); padding: 6px 14px; margin-top: 14px; }
-  .author-chip span { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); }
-
-  /* NEWSLETTER */
-  .newsletter { background: var(--mid-grey); border-top: 3px solid var(--red); border-bottom: 1px solid var(--border); padding: 48px 16px; text-align: center; }
-  .newsletter-eyebrow { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.35em; color: var(--red); margin-bottom: 12px; }
-  .newsletter h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(22px, 6vw, 42px); line-height: 1.1; color: var(--off-white); margin: 0 auto 12px; letter-spacing: -0.02em; }
-  .newsletter p { font-size: 13px; color: var(--text-muted); max-width: 380px; margin: 0 auto 24px; line-height: 1.6; }
-  .newsletter-form { display: flex; flex-direction: column; gap: 0; max-width: 400px; margin: 0 auto 14px; }
-  .newsletter-form input { background: rgba(245,240,232,0.06); border: 1px solid rgba(245,240,232,0.15); color: var(--off-white); padding: 14px 16px; font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none; width: 100%; }
-  .newsletter-form input::placeholder { color: var(--text-muted); }
-  .newsletter-form input:focus { border-color: var(--red); }
-  .newsletter-form button { background: var(--red); border: none; color: #fff; padding: 14px 20px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; width: 100%; margin-top: 2px; }
-  .newsletter-social { font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; }
-
-  /* FOOTER */
-  footer { background: #111; border-top: 1px solid var(--border); padding: 40px 16px 80px; }
-  .footer-inner { max-width: 1200px; margin: 0 auto; }
-  .footer-logo { height: 48px; object-fit: contain; display: block; margin-bottom: 12px; }
-  .footer-brand p { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 32px; }
-  .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; }
-  .footer-col h4 { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
-  .footer-col ul { list-style: none; }
-  .footer-col ul li { margin-bottom: 10px; }
-  .footer-col ul li a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
-  .footer-col ul li a:hover { color: var(--off-white); }
-  .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .footer-bottom p { font-size: 11px; color: var(--text-muted); }
-
-  /* MOBILE BOTTOM NAV */
-  .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #111; border-top: 1px solid var(--border); z-index: 200; }
-  .mobile-nav-inner { display: flex; justify-content: space-around; align-items: center; height: 58px; }
-  .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; flex: 1; justify-content: center; padding: 6px 0; }
-  .mobile-nav-item svg { width: 20px; height: 20px; stroke: var(--text-muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .mobile-nav-item.active svg { stroke: var(--red); }
-  .mobile-nav-item span { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
-  .mobile-nav-item.active span { color: var(--red); }
-  .mobile-nav-item img { width: 26px; height: 26px; object-fit: contain; }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .mobile-nav { display: block; }
-    .nav-links { display: none; }
-    .logo-full { display: none; }
-    body { padding-bottom: 58px; }
-    .footer-cols { grid-template-columns: repeat(2, 1fr); }
-    .cards-grid { grid-template-columns: 1fr; }
-  }
-  @media (min-width: 769px) {
-    .newsletter-form { flex-direction: row; }
-    .newsletter-form input { border-right: none; }
-    .newsletter-form button { width: auto; margin-top: 0; }
-  }
-</style>
 </head>
 <body>
 
-<!-- TOP NAV -->
-<nav class="topnav">
-  <div class="nav-inner">
-    <a href="/" class="logo">
-      <img src="RBlogo.png" alt="RB" class="logo-rb">
-      <img src="logo-full.png" alt="Rene Bakalović — Food. Drink. City." class="logo-full">
-    </a>
-    <ul class="nav-links">
-      <li><a href="/" class="active">Feed</a></li>
-      <li><a href="#breaking">Breaking</a></li>
+<header class="site-header">
+  <div class="masthead-meta">
+    <span>Zagreb, četvrtak 7. svibnja 2026.</span>
+    <span>Urbano novinarstvo o hrani, piću i gradu</span>
+    <span>renebakalovic.online</span>
+  </div>
+  <div class="masthead-title-wrap">
+    <img src="logo-full.png" class="logo-full" alt="Rene Bakalović — Food. Drink. City.">
+    <div class="masthead-tagline">— online magazin —</div>
+  </div>
+  <div class="masthead-rules"></div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/">Feed</a></li>
+      <li class="nav-breaking"><a href="#breaking">Breaking</a></li>
       <li><a href="#skriveni-biseri">Skriveni biseri</a></li>
+      <li><a href="#ispod-10-eura">Ispod 10€</a></li>
       <li><a href="#samo-kod-nas">Samo kod nas</a></li>
-      <li><a href="#millennial-view">Millennial View</a></li>
+      <li class="nav-mv"><a href="#millennial-view">Millennial View</a></li>
       <li><a href="#newsletter">Newsletter</a></li>
       <li><a href="about.html">O nama</a></li>
-      <li><a href="#newsletter" class="nav-cta">Pretplati se</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">FOOD. DRINK. CITY.</p>
-    <h1>Što jede grad upravo sad.</h1>
-    <p class="hero-sub">Prava hrana. Prava mjesta. Nula PR-a. Nova otvorenja, skriveni biseri i ulični kaos koji vrijedi tvog novca.</p>
-    <div class="hero-actions">
-      <a href="#breaking" class="btn-primary">Breaking News</a>
-      <a href="#newsletter" class="btn-ghost">Petak Drop</a>
-    </div>
-  </div>
-</section>
-
-<!-- MAIN CONTENT -->
 <div class="content">
 
   <!-- FEED -->
   <section id="feed">
     <div class="section-header">
       <h2>Feed</h2>
+      <div class="section-rule"></div>
       <span class="section-meta" id="feed-count"></span>
     </div>
     <div class="cards-grid" id="feed-grid"></div>
@@ -241,6 +92,7 @@
   <section id="breaking">
     <div class="section-header">
       <h2>Breaking News</h2>
+      <div class="section-rule"></div>
       <span class="section-meta" id="breaking-count"></span>
     </div>
     <div class="cards-grid" id="breaking-grid"></div>
@@ -250,6 +102,7 @@
   <section id="skriveni-biseri">
     <div class="section-header">
       <h2>Skriveni biseri</h2>
+      <div class="section-rule"></div>
       <span class="section-meta" id="biseri-count"></span>
     </div>
     <div class="cards-grid" id="biseri-grid"></div>
@@ -259,6 +112,7 @@
   <section id="ispod-10-eura">
     <div class="section-header">
       <h2>Ispod 10€</h2>
+      <div class="section-rule"></div>
       <span class="section-meta" id="ispod-count"></span>
     </div>
     <div class="cards-grid" id="ispod-grid"></div>
@@ -306,82 +160,58 @@
   <p class="newsletter-social">Odjava bilo kada.</p>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<footer class="site-footer">
   <div class="footer-inner">
-    <img src="logo-full.png" alt="Rene Bakalović" class="footer-logo">
     <div class="footer-brand">
-      <p>Urbana hrana i lifestyle. Što jede grad — svaki dan.</p>
+      <span class="footer-logo">Rene Bakalović</span>
+      <p>Online magazin o hrani,<br>piću i gradu.</p>
+      <div style="margin-top: 12px; font-family: var(--font-label); font-size: 10px; letter-spacing: 3px; color: var(--ink-muted);">FOOD · DRINK · CITY</div>
     </div>
-    <div class="footer-cols">
-      <div class="footer-col">
-        <h4>Sekcije</h4>
-        <ul>
-          <li><a href="#breaking">Breaking</a></li>
-          <li><a href="#skriveni-biseri">Skriveni biseri</a></li>
-          <li><a href="#ispod-10-eura">Ispod 10€</a></li>
-          <li><a href="#samo-kod-nas">Samo kod nas</a></li>
-          <li><a href="#millennial-view">Millennial View</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Brend</h4>
-        <ul>
-          <li><a href="about.html">O nama</a></li>
-          <li><a href="#">Oglašavanje</a></li>
-          <li><a href="#">Kontakt</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Prati</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="#newsletter">Newsletter</a></li>
-        </ul>
-      </div>
+    <div class="footer-col">
+      <h4>Sekcije</h4>
+      <ul>
+        <li><a href="#breaking">Breaking</a></li>
+        <li><a href="#skriveni-biseri">Skriveni biseri</a></li>
+        <li><a href="#ispod-10-eura">Ispod 10€</a></li>
+        <li><a href="#samo-kod-nas">Samo kod nas</a></li>
+        <li><a href="#millennial-view" style="color: var(--mv-blue);">Millennial View</a></li>
+      </ul>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Rene Bakalović. Sva prava pridržana.</p>
-      <p style="color:var(--red);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;">FOOD. DRINK. CITY.</p>
+    <div class="footer-col">
+      <h4>Brend</h4>
+      <ul>
+        <li><a href="about.html">O nama</a></li>
+        <li><a href="#">Oglašavanje</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h4>Prati</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rene Bakalović. Sva prava pridržana.</span>
+    <span style="font-family: var(--font-label); letter-spacing: 2px;">FOOD · DRINK · CITY</span>
   </div>
 </footer>
-
-<!-- MOBILE BOTTOM NAV -->
-<nav class="mobile-nav">
-  <div class="mobile-nav-inner">
-    <a href="/" class="mobile-nav-item active">
-      <img src="RBlogo.png" alt="RB">
-      <span>Feed</span>
-    </a>
-    <a href="#breaking" class="mobile-nav-item">
-      <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      <span>Breaking</span>
-    </a>
-    <a href="#samo-kod-nas" class="mobile-nav-item">
-      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-      <span>Samo kod nas</span>
-    </a>
-    <a href="#millennial-view" class="mobile-nav-item">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
-      <span>MV</span>
-    </a>
-    <a href="#newsletter" class="mobile-nav-item">
-      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
-      <span>Newsletter</span>
-    </a>
-  </div>
-</nav>
 
 <script>
   function buildCard(article) {
     const card = document.createElement('a');
-    card.className = article.category === 'millennial-view' ? 'card mv' : 'card';
+    const isMV = article.category === 'millennial-view';
+    card.className = isMV ? 'card mv mv-card' : 'card';
     card.href = article.url;
     const imageHTML = article.image
       ? `<img class="card-image" src="${article.image}" alt="${article.title}" loading="lazy">`
       : `<div class="card-image-placeholder"><img src="RBlogo.png" alt="RB"></div>`;
+    const authorChip = article.author === 'Vlado Stipan'
+      ? `<div class="author-chip">F&amp;B veteran &amp; AI specialist</div>`
+      : '';
     card.innerHTML = `
       ${imageHTML}
       <div class="card-body">
@@ -392,6 +222,7 @@
           <span class="card-author">${article.author}</span>
           <span class="card-date">${article.dateLabel}</span>
         </div>
+        ${authorChip}
         <div class="card-read">Čitaj →</div>
       </div>
     `;
@@ -454,13 +285,6 @@
       document.getElementById('feed-grid').innerHTML =
         '<div class="empty-state"><div class="empty-icon"><img src="RBlogo.png" alt="RB"></div><h3>Feed se učitava.</h3><p>Pokrenite lokalni server: python3 -m http.server 8000</p></div>';
     });
-
-  document.querySelectorAll('.mobile-nav-item').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelectorAll('.mobile-nav-item').forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-    });
-  });
 </script>
 </body>
 </html>

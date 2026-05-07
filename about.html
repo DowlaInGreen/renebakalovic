@@ -14,7 +14,8 @@
   <meta property="og:locale" content="hr_HR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="RBlogo.png">
   <script type="application/ld+json">
   {
@@ -40,96 +41,33 @@
     ]
   }
   </script>
-  <style>
-    :root {
-      --red: #E6392F;
-      --charcoal: #1A1A1A;
-      --off-white: #F5F0E8;
-      --mid-grey: #2C2C2C;
-      --text-muted: #888;
-      --border: rgba(255,255,255,0.08);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 100%; overflow-x: hidden; }
-    body { background: var(--charcoal); color: var(--off-white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-
-    /* NAV */
-    nav.topnav { background: var(--charcoal); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; width: 100%; }
-    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
-    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-    .logo-rb { height: 36px; width: 36px; object-fit: contain; display: block; }
-    .logo-full { height: 28px; object-fit: contain; display: block; }
-    .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
-    .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; }
-    .nav-links a:hover, .nav-links a.active { color: var(--off-white); }
-    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 8px 14px; }
-
-    /* PAGE HEADER */
-    .page-header { border-bottom: 3px solid var(--red); padding: 60px 16px 48px; background: var(--mid-grey); }
-    .page-header-inner { max-width: 1200px; margin: 0 auto; }
-    .page-eyebrow { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 0.4em; color: var(--red); margin-bottom: 16px; }
-    .page-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(36px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; }
-
-    /* ABOUT CONTENT */
-    .about-wrap { max-width: 1200px; margin: 0 auto; padding: 64px 16px; }
-    .about-intro { font-size: 19px; line-height: 1.7; color: var(--off-white); max-width: 720px; margin-bottom: 72px; font-weight: 300; }
-    .about-intro strong { color: var(--red); font-weight: 600; }
-
-    /* AUTHOR CARDS */
-    .authors { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 72px; }
-    @media (max-width: 768px) { .authors { grid-template-columns: 1fr; } }
-
-    .author-card { background: var(--mid-grey); padding: 48px 40px; position: relative; }
-    .author-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--red); }
-    .author-number { font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: rgba(230,57,47,0.1); line-height: 1; margin-bottom: -20px; }
-    .author-label { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: var(--red); margin-bottom: 12px; display: block; }
-    .author-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; margin-bottom: 8px; }
-    .author-title { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 28px; }
-    .author-bio { font-size: 16px; line-height: 1.75; color: rgba(245,240,232,0.85); margin-bottom: 28px; }
-    .author-credits { list-style: none; margin-bottom: 32px; }
-    .author-credits li { font-size: 13px; color: var(--text-muted); padding: 6px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
-    .author-credits li::before { content: '—'; color: var(--red); flex-shrink: 0; }
-    .author-social a { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--off-white); text-decoration: none; border: 1px solid var(--border); padding: 10px 18px; transition: border-color 0.2s, color 0.2s; }
-    .author-social a:hover { border-color: var(--red); color: var(--red); }
-
-    /* TAGLINE BLOCK */
-    .about-tagline { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; text-align: center; }
-    .about-tagline p { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(20px, 3vw, 32px); color: rgba(245,240,232,0.6); max-width: 680px; margin: 0 auto; line-height: 1.5; }
-    .about-tagline strong { color: var(--off-white); font-style: normal; }
-
-
-    .author-photo { width: 100%; aspect-ratio: 3/2; object-fit: cover; object-position: center top; margin-bottom: 32px; background: #2C2C2C; display: block; filter: grayscale(20%); }
-    .author-photo-placeholder { width: 100%; aspect-ratio: 3/2; background: var(--mid-grey); border: 1px dashed rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 32px; }
-    .author-photo-placeholder span { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
-
-    .author-card:nth-child(2)::before { background: #1E6FD9; }
-    .author-card:nth-child(2) .author-label { color: #1E6FD9; }
-    .author-card:nth-child(2) .author-credits li::before { color: #1E6FD9; }
-    .author-card:nth-child(2) .author-social a:hover { border-color: #1E6FD9; color: #1E6FD9; }
-    .vlado-num { color: rgba(30,111,217,0.1) !important; }
-    .vlado-placeholder { border-color: rgba(30,111,217,0.2) !important; }
-    /* FOOTER */
-    footer { border-top: 1px solid var(--border); padding: 32px 16px; margin-top: 80px; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.2em; color: var(--text-muted); text-decoration: none; }
-    .footer-copy { font-size: 12px; color: var(--text-muted); }
-  </style>
 </head>
 <body>
 
-<nav class="topnav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="RBlogo.png" class="logo-rb" alt="RB">
-      <img src="logo-full.png" class="logo-full" alt="Rene Bakalović">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Početna</a></li>
-      <li><a href="millennial-view/mv-sustav-vs-improvizacija.html">Millennial View</a></li>
-      <li><a href="about.html" class="active">O nama</a></li>
-    </ul>
+<header class="site-header">
+  <div class="masthead-meta">
+    <span>Zagreb, četvrtak 7. svibnja 2026.</span>
+    <span>Urbano novinarstvo o hrani, piću i gradu</span>
+    <span>renebakalovic.online</span>
   </div>
-</nav>
+  <div class="masthead-title-wrap">
+    <img src="logo-full.png" class="logo-full" alt="Rene Bakalović — Food. Drink. City.">
+    <div class="masthead-tagline">— online magazin —</div>
+  </div>
+  <div class="masthead-rules"></div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="index.html">Feed</a></li>
+      <li class="nav-breaking"><a href="index.html#breaking">Breaking</a></li>
+      <li><a href="index.html#skriveni-biseri">Skriveni biseri</a></li>
+      <li><a href="index.html#ispod-10-eura">Ispod 10€</a></li>
+      <li><a href="index.html#samo-kod-nas">Samo kod nas</a></li>
+      <li class="nav-mv"><a href="index.html#millennial-view">Millennial View</a></li>
+      <li><a href="index.html#newsletter">Newsletter</a></li>
+      <li><a href="about.html">O nama</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="page-header">
   <div class="page-header-inner">
@@ -216,10 +154,43 @@
 
 </div>
 
-<footer>
+<footer class="site-footer">
   <div class="footer-inner">
-    <a href="index.html" class="footer-logo">Food. Drink. City.</a>
-    <span class="footer-copy">© 2026 Rene Bakalović</span>
+    <div class="footer-brand">
+      <span class="footer-logo">Rene Bakalović</span>
+      <p>Online magazin o hrani,<br>piću i gradu.</p>
+      <div style="margin-top: 12px; font-family: var(--font-label); font-size: 10px; letter-spacing: 3px; color: var(--ink-muted);">FOOD · DRINK · CITY</div>
+    </div>
+    <div class="footer-col">
+      <h4>Sekcije</h4>
+      <ul>
+        <li><a href="index.html#breaking">Breaking</a></li>
+        <li><a href="index.html#skriveni-biseri">Skriveni biseri</a></li>
+        <li><a href="index.html#ispod-10-eura">Ispod 10€</a></li>
+        <li><a href="index.html#samo-kod-nas">Samo kod nas</a></li>
+        <li><a href="index.html#millennial-view" style="color: var(--mv-blue);">Millennial View</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Brend</h4>
+      <ul>
+        <li><a href="about.html">O nama</a></li>
+        <li><a href="#">Oglašavanje</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Prati</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="index.html#newsletter">Newsletter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rene Bakalović. Sva prava pridržana.</span>
+    <span style="font-family: var(--font-label); letter-spacing: 2px;">FOOD · DRINK · CITY</span>
   </div>
 </footer>
 
