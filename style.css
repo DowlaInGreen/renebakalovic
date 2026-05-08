@@ -857,3 +857,11 @@ body.mv-page .masthead-rules { border-color: rgba(255,255,255,0.15); }
 .mv-article .logo-text-main,
 body.mv .logo-text-main { color: #ffffff !important; }
 body.mv .logo-text-sub { color: rgba(255,255,255,0.65) !important; }
+
+/* ── MV ARTICLE HEADER LEFT ALIGN ──────────────────────── */
+body.mv .article-header,
+body.mv .article-category,
+body.mv h1,
+body.mv .article-meta { text-align: left !important; }
+body.mv .hero-title { text-align: left !important; }
+body.mv .category-label { text-align: left !important; }
