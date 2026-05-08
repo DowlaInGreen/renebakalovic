@@ -767,7 +767,9 @@ body.mv-page .hero > img {
   display: block;
   border-bottom: none;
 }
-body.mv-page .hero { display: flex; flex-direction: column; align-items: center; }
+body.mv-page .hero { display: flex; flex-direction: column; align-items: stretch; }
+body.mv-page .hero-content { text-align: left; padding-left: var(--gutter); padding-right: var(--gutter); }
+body.mv-page .hero > img { align-self: center; }
 .hero-overlay { display: none; }
 .hero-content {
   max-width: var(--max-width);
@@ -863,5 +865,6 @@ body.mv .article-header,
 body.mv .article-category,
 body.mv h1,
 body.mv .article-meta { text-align: left !important; }
+body.mv .article-meta { justify-content: flex-start !important; }
 body.mv .hero-title { text-align: left !important; }
 body.mv .category-label { text-align: left !important; }
