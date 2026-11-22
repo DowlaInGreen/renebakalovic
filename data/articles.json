@@ -1,5 +1,17 @@
 [
   {
+    "id": "mv-claude-turisticki-vodic-vodnjan",
+    "title": "Vodič koji zna reći „ne znam”",
+    "excerpt": "Vodnjan, sajam maslinovih ulja, kava na Narodnom trgu. Testirao sam Claudea kao privatnog turističkog vodiča uživo na terenu. Najkorisnija rečenica cijele ture bila je: „Ovo nisam provjerio.”",
+    "category": "millennial-view",
+    "categoryLabel": "Millennial View",
+    "author": "Vlado Stipan",
+    "date": "2026-11-22",
+    "dateLabel": "22. studenoga 2026.",
+    "image": "images/mv-claude-turisticki-vodic-vodnjan.jpg",
+    "url": "millennial-view/mv-claude-turisticki-vodic-vodnjan.html"
+  },
+  {
     "id": "mv-vino-klima-ai",
     "title": "AI Vinobran",
     "excerpt": "Vinari Beringer i Matua ne čekaju da se dogodi najgore. Koriste AI koji modelira klimatske scenarije i predviđa prinose berbe. Potrošnja vode pala za 20 posto. Kvaliteta grožđa raste unatoč uvjetima.",
